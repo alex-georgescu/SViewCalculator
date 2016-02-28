@@ -10,6 +10,27 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) UITextField *uilNumbersArea;
+@property (strong, nonatomic) UIButton *uibDelete;
+@property (strong, nonatomic) UIButton *uibReset;
+@property (strong, nonatomic) UIButton *uibPercent;
+@property (strong, nonatomic) UIButton *uibDiv;
+@property (strong, nonatomic) UIButton *uib7;
+@property (strong, nonatomic) UIButton *uib8;
+@property (strong, nonatomic) UIButton *uib9;
+@property (strong, nonatomic) UIButton *uibMultiply;
+@property (strong, nonatomic) UIButton *uib4;
+@property (strong, nonatomic) UIButton *uib5;
+@property (strong, nonatomic) UIButton *uib6;
+@property (strong, nonatomic) UIButton *uibMinus;
+@property (strong, nonatomic) UIButton *uib1;
+@property (strong, nonatomic) UIButton *uib2;
+@property (strong, nonatomic) UIButton *uib3;
+@property (strong, nonatomic) UIButton *uibPlus;
+@property (strong, nonatomic) UIButton *uibZero;
+@property (strong, nonatomic) UIButton *uibDot;
+@property (strong, nonatomic) UIButton *uibSign;
+@property (strong, nonatomic) UIButton *uibEquals;
 
 @end
 

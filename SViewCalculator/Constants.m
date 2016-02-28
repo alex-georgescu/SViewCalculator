@@ -35,6 +35,6 @@ NSString* const Multiply = @"x";
 NSString* const Division = @"÷";
 NSString* const Percent = @"%";
 NSString* const Reset = @"C";
-NSString* const Delete = @"Del";
+NSString* const Delete = @"⌫";
 
 @end
