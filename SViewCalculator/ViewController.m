@@ -42,6 +42,9 @@
     // 1. Create TEXT AREA and add to our view
     self.uilNumbersArea = [[UITextField alloc] init];
     self.uilNumbersArea.borderStyle = UITextBorderStyleRoundedRect;
+    self.uilNumbersArea.textAlignment = NSTextAlignmentRight;
+    self.uilNumbersArea.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+    self.uilNumbersArea.font = [UIFont systemFontOfSize:24];
     self.uilNumbersArea.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.uilNumbersArea];
     
