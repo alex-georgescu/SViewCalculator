@@ -46,7 +46,9 @@
     self.uilNumbersArea.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     self.uilNumbersArea.font = [UIFont systemFontOfSize:24];
     self.uilNumbersArea.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.uilNumbersArea setDelegate:self];
     [self.view addSubview:self.uilNumbersArea];
+    
     
     // 2. Text field Constraints
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
@@ -73,6 +75,31 @@
                                               multiplier:0.143 constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfRightConstraint, tfHeightConstraint]];
+}
+
+- (BOOL) textField: (UITextField *)theTextField
+shouldChangeCharactersInRange:(NSRange)range
+ replacementString: (NSString *)string
+{
+    //return yes or no after comparing the characters
+    
+    // allow backspace and minus
+    if (!string.length
+        ||
+        (theTextField.text.length == 0 && [string compare:@"-"] == NSOrderedSame))
+    {
+        return YES;
+    }
+    
+    // allow doubles
+    if ([string doubleValue]
+        ||
+        ([string compare:@"."] ==  NSOrderedSame && [theTextField.text containsString:@"."] == false))
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 
