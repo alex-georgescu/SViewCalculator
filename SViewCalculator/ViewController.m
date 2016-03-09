@@ -77,6 +77,7 @@
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfRightConstraint, tfHeightConstraint]];
 }
 
+
 - (BOOL) textField: (UITextField *)theTextField
 shouldChangeCharactersInRange:(NSRange)range
  replacementString: (NSString *)string
@@ -112,6 +113,10 @@ shouldChangeCharactersInRange:(NSRange)range
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
+    
+    [self.uibDelete addTarget:self
+                    action:@selector(removeLastDigitFromResult)
+                    forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uibDelete attribute:NSLayoutAttributeLeft
@@ -150,6 +155,10 @@ shouldChangeCharactersInRange:(NSRange)range
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
+    
+    [self.uibReset addTarget:self
+                   action:@selector(resetResult)
+                   forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uibReset
@@ -192,6 +201,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uibPercent addTarget:self
+                   action:@selector(calculateResult)
+                   forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPercent
@@ -236,6 +249,11 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uibDiv addTarget:self
+                 action:@selector(calculateResult)
+                 forControlEvents:UIControlEventTouchUpInside];
+
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibDiv
                                              attribute:NSLayoutAttributeLeft
@@ -270,7 +288,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uib7 = [self createCustomButton:self.uib7
                   parentView:self.view
-             backgroundColor:[UIColor lightGrayColor]
+                 backgroundColor:[UIColor lightGrayColor]
                    withTitle:Seven
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -398,6 +416,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uibMultiply addTarget:self
+                  action:@selector(calculateResult)
+        forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibMultiply
@@ -568,6 +590,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uibMinus addTarget:self
+                  action:@selector(calculateResult)
+        forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibMinus
                                              attribute:NSLayoutAttributeLeft
@@ -737,6 +763,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uibPlus addTarget:self
+                  action:@selector(calculateResult)
+        forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPlus
                                              attribute:NSLayoutAttributeLeft
@@ -864,6 +894,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uibEquals addTarget:self
+                  action:@selector(calculateResult)
+        forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibEquals
                                              attribute:NSLayoutAttributeLeft
@@ -931,9 +965,35 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
-- (void)didReceiveMemoryWarning {
+-(void)resetResult
+{
+    self.uilNumbersArea.text = @"";
+}
+
+
+-(void)removeLastDigitFromResult
+{
+    if (self.uilNumbersArea.text.length > 1)
+    {
+        self.uilNumbersArea.text = [self.uilNumbersArea.text substringToIndex:self.uilNumbersArea.text.length - 1];
+    }
+    else
+    {
+        [self resetResult];
+    }
+}
+
+
+-(void)calculateResult
+{
+    double inputNr = [self.uilNumbersArea.text doubleValue];
+    NSLog(@"%f", inputNr);
+}
+
+
+-(void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
