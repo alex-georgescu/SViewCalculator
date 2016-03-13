@@ -8,26 +8,36 @@
 
 @interface Constants : NSObject
 
-extern NSString* const Delete;
-extern NSString* const One;
-extern NSString* const Two;
-extern NSString* const Three;
-extern NSString* const Four;
-extern NSString* const Five;
-extern NSString* const Six;
-extern NSString* const Seven;
-extern NSString* const Eight;
-extern NSString* const Nine;
-extern NSString* const Zero;
-extern NSString* const Dot;
-extern NSString* const Signs;
-extern NSString* const Equals;
-extern NSString* const Plus;
-extern NSString* const Minus;
-extern NSString* const Multiply;
-extern NSString* const Division;
-extern NSString* const Percent;
-extern NSString* const Reset;
-extern NSString* const Delete;
+extern NSString* const ONE;
+extern NSString* const TWO;
+extern NSString* const THREE;
+extern NSString* const FOUR;
+extern NSString* const FIVE;
+extern NSString* const SIX;
+extern NSString* const SEVEN;
+extern NSString* const EIGHT;
+extern NSString* const NINE;
+extern NSString* const ZERO;
+extern NSString* const DOT;
+extern NSString* const SIGNS;
+extern NSString* const EQUALITY;
+extern NSString* const ADDITION;
+extern NSString* const SUBSTRACTION;
+extern NSString* const MULTIPLICATION;
+extern NSString* const DIVISION;
+extern NSString* const PERCENTAGE;
+extern NSString* const RESET;
+extern NSString* const DELETE;
+
+typedef enum
+{
+    EQUALS = 0,
+    ADD = 1,
+    SUBSTRACT = 2,
+    MULTIPLY = 3,
+    DIVIDE = 4,
+    PERCENT_OFF = 5
+    
+} OPERATION;
 
 @end

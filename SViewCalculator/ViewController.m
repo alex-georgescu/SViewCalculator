@@ -109,7 +109,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDelete = [self createCustomButton:self.uibDelete
                                   parentView:self.view
                              backgroundColor:[UIColor lightGrayColor]
-                                   withTitle:Delete
+                                   withTitle:DELETE
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
@@ -151,13 +151,13 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibReset = [self createCustomButton:self.uibReset
                                   parentView:self.view
                              backgroundColor:[UIColor lightGrayColor]
-                                   withTitle:Reset
+                                   withTitle:RESET
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
     
     [self.uibReset addTarget:self
-                   action:@selector(resetResult)
+                   action:@selector(resetInput)
                    forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
@@ -192,19 +192,22 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
+// %
 -(void)createPercentButton
 {
     self.uibPercent = [self createCustomButton:self.uibPercent
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Percent
+                   withTitle:PERCENTAGE
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+   
+    self.uibPercent.tag = PERCENT_OFF;
     
     [self.uibPercent addTarget:self
-                   action:@selector(calculateResult)
-                   forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(calculateResult:)
+                     forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPercent
@@ -244,13 +247,15 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDiv = [self createCustomButton:self.uibDiv
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:Division
+                   withTitle:DIVISION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    self.uibDiv.tag = DIVIDE;
+    
     [self.uibDiv addTarget:self
-                 action:@selector(calculateResult)
+                    action:@selector(calculateResult:)
                  forControlEvents:UIControlEventTouchUpInside];
 
     
@@ -289,7 +294,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib7 = [self createCustomButton:self.uib7
                   parentView:self.view
                  backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Seven
+                   withTitle:SEVEN
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -327,7 +332,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib8 = [self createCustomButton:self.uib8
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Eight
+                   withTitle:EIGHT
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -369,7 +374,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib9 = [self createCustomButton:self.uib9
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Nine
+                   withTitle:NINE
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -412,13 +417,15 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibMultiply = [self createCustomButton:self.uibMultiply
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:Multiply
+                   withTitle:MULTIPLICATION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    self.uibMultiply.tag = MULTIPLY;
+    
     [self.uibMultiply addTarget:self
-                  action:@selector(calculateResult)
+                         action:@selector(calculateResult:)
         forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
@@ -458,7 +465,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib4 = [self createCustomButton:self.uib4
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Four
+                   withTitle:FOUR
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -500,7 +507,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib5 = [self createCustomButton:self.uib5
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Five
+                   withTitle:FIVE
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -542,7 +549,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib6 = [self createCustomButton:self.uib6
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Six
+                   withTitle:SIX
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -585,14 +592,16 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibMinus = [self createCustomButton:self.uibMinus
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:Minus
+                   withTitle:SUBSTRACTION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    self.uibMinus.tag = SUBSTRACT;
+    
     [self.uibMinus addTarget:self
-                  action:@selector(calculateResult)
-        forControlEvents:UIControlEventTouchUpInside];
+                      action:@selector(calculateResult:)
+                    forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibMinus
@@ -631,7 +640,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib1 = [self createCustomButton:self.uib1
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:One
+                   withTitle:ONE
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -673,7 +682,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib2 = [self createCustomButton:self.uib2
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Two
+                   withTitle:TWO
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -715,7 +724,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib3 = [self createCustomButton:self.uib3
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Three
+                   withTitle:THREE
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -758,14 +767,16 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibPlus = [self createCustomButton:self.uibPlus
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:Plus
+                   withTitle:ADDITION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    self.uibPlus.tag = ADD;
+    
     [self.uibPlus addTarget:self
-                  action:@selector(calculateResult)
-        forControlEvents:UIControlEventTouchUpInside];
+                  action:@selector(calculateResult:)
+                  forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPlus
@@ -804,7 +815,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibZero = [self createCustomButton:self.uibZero
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Zero
+                   withTitle:ZERO
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -846,7 +857,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDot = [self createCustomButton:self.uibDot
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:Dot
+                   withTitle:DOT
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -889,13 +900,15 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibEquals = [self createCustomButton:self.uibEquals
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:Equals
+                   withTitle:EQUALITY
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    self.uibEquals.tag = EQUALS;
+    
     [self.uibEquals addTarget:self
-                  action:@selector(calculateResult)
+                       action:@selector(calculateResult:)
         forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
@@ -965,7 +978,7 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
--(void)resetResult
+-(void)resetInput
 {
     self.uilNumbersArea.text = @"";
 }
@@ -979,15 +992,55 @@ shouldChangeCharactersInRange:(NSRange)range
     }
     else
     {
-        [self resetResult];
+        [self resetInput];
     }
 }
 
 
--(void)calculateResult
+double _result = INT32_MAX;
+
+-(void)calculateResult : (UIButton*) sender
 {
     double inputNr = [self.uilNumbersArea.text doubleValue];
-    NSLog(@"%f", inputNr);
+    
+    if (_result != INT32_MAX)
+    {
+        OPERATION operation = (OPERATION)sender.tag;
+        switch (operation)
+        {
+            case ADD:
+                _result = _result + inputNr;
+                break;
+            
+            case SUBSTRACT:
+                _result = _result - inputNr;
+                break;
+            
+            case MULTIPLY:
+                _result = _result * inputNr;
+                break;
+            
+            case DIVIDE:
+                _result = _result / inputNr;
+                break;
+            
+            case PERCENT_OFF:
+                _result = inputNr / 100;
+                break;
+                
+            default: //EQUALS
+                
+                break;
+        }
+        
+        self.uilNumbersArea.text = [NSString stringWithFormat:@"%f", _result];
+    }
+    else
+    {
+        _result = inputNr;
+        
+        [self resetInput];
+    }
 }
 
 

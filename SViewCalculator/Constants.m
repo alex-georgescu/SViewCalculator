@@ -16,25 +16,25 @@
 
 @implementation Constants
 
-NSString* const One = @"1";
-NSString* const Two = @"2";
-NSString* const Three = @"3";
-NSString* const Four = @"4";
-NSString* const Five = @"5";
-NSString* const Six = @"6";
-NSString* const Seven = @"7";
-NSString* const Eight = @"8";
-NSString* const Nine = @"9";
-NSString* const Zero = @"0";
-NSString* const Dot = @".";
-NSString* const Signs = @"+/-";
-NSString* const Equals = @"=";
-NSString* const Plus = @"+";
-NSString* const Minus = @"-";
-NSString* const Multiply = @"x";
-NSString* const Division = @"÷";
-NSString* const Percent = @"%";
-NSString* const Reset = @"C";
-NSString* const Delete = @"⌫";
+NSString* const ONE = @"1";
+NSString* const TWO = @"2";
+NSString* const THREE = @"3";
+NSString* const FOUR = @"4";
+NSString* const FIVE = @"5";
+NSString* const SIX = @"6";
+NSString* const SEVEN = @"7";
+NSString* const EIGHT = @"8";
+NSString* const NINE = @"9";
+NSString* const ZERO = @"0";
+NSString* const DOT = @".";
+NSString* const SIGNS = @"+/-";
+NSString* const EQUALITY = @"=";
+NSString* const ADDITION = @"+";
+NSString* const SUBSTRACTION = @"-";
+NSString* const MULTIPLICATION = @"x";
+NSString* const DIVISION = @"÷";
+NSString* const PERCENTAGE = @"%";
+NSString* const RESET = @"C";
+NSString* const DELETE = @"⌫";
 
 @end
