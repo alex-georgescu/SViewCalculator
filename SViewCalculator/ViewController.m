@@ -59,18 +59,18 @@
                                            constraintWithItem:self.uilNumbersArea attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationGreaterThanOrEqual
                                            toItem:self.view attribute:NSLayoutAttributeTop
-                                           multiplier:1.0 constant:30];
+                                           multiplier:1.0 constant:20];
     
     NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uilNumbersArea attribute:NSLayoutAttributeLeft
                                             relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
-                                            NSLayoutAttributeLeft multiplier:1.0 constant:10];
+                                            NSLayoutAttributeLeft multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uilNumbersArea attribute:NSLayoutAttributeRight
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.view attribute:NSLayoutAttributeRight
-                                             multiplier:1.0 constant:-10];
+                                             multiplier:1.0 constant:-5];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
                                               constraintWithItem:self.uilNumbersArea attribute:NSLayoutAttributeHeight
@@ -132,7 +132,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uibDelete attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:10];
+                                           multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uibDelete attribute:NSLayoutAttributeWidth
@@ -144,7 +144,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                             constraintWithItem:self.uibDelete attribute:NSLayoutAttributeHeight
                                             relatedBy:NSLayoutRelationEqual
                                             toItem:self.view attribute:NSLayoutAttributeHeight
-                                            multiplier:0.143 constant:0];
+                                            multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -178,7 +178,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea
                                            attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:10];
+                                           multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibReset attribute:NSLayoutAttributeWidth
@@ -190,7 +190,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibReset attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -227,7 +227,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea
                                            attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:10];
+                                           multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPercent attribute:NSLayoutAttributeWidth
@@ -239,7 +239,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibPercent attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -275,7 +275,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uibDiv attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:10];
+                                           multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibDiv attribute:NSLayoutAttributeWidth
@@ -287,7 +287,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibDiv attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -325,7 +325,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib7 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -367,7 +367,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib8 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -409,7 +409,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib9 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -458,7 +458,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibMultiply attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -500,7 +500,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib4 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -542,7 +542,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib5 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -584,7 +584,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib6 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -633,7 +633,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibMinus attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -675,7 +675,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib1 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -717,7 +717,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib2 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -759,7 +759,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uib3 attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -808,7 +808,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibPlus attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -850,7 +850,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibZero attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -892,7 +892,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibDot attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -934,7 +934,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibSign attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }
@@ -983,7 +983,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                               constraintWithItem:self.uibEquals attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
 }

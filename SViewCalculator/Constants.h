@@ -28,6 +28,7 @@ extern NSString* const DIVISION;
 extern NSString* const PERCENTAGE;
 extern NSString* const RESET;
 extern NSString* const DELETE;
+extern double const BUTTON_HEIGHT_MULTIPLIER;
 
 typedef enum
 {

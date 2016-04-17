@@ -37,4 +37,6 @@ NSString* const PERCENTAGE = @"%";
 NSString* const RESET = @"C";
 NSString* const DELETE = @"⌫";
 
+double const BUTTON_HEIGHT_MULTIPLIER = 0.12;
+
 @end
