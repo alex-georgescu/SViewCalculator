@@ -46,6 +46,10 @@
     self.uilNumbersArea.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     self.uilNumbersArea.font = [UIFont systemFontOfSize:24];
     self.uilNumbersArea.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // Prevent keyboard from showing up when editing read-only text field
+    self.uilNumbersArea.inputView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     [self.uilNumbersArea setDelegate:self];
     [self.view addSubview:self.uilNumbersArea];
     
@@ -72,7 +76,7 @@
                                               constraintWithItem:self.uilNumbersArea attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:0.143 constant:0];
+                                              multiplier:0.183 constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfRightConstraint, tfHeightConstraint]];
 }
@@ -997,50 +1001,70 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
-double _result = INT32_MAX;
+double _operandOne = INT32_MAX;
+double _operandTwo = INT32_MAX;
+OPERATION _operator = NONE;
+
 
 -(void)calculateResult : (UIButton*) sender
 {
-    double inputNr = [self.uilNumbersArea.text doubleValue];
+    OPERATION newOperation = (OPERATION)sender.tag;
     
-    if (_result != INT32_MAX)
+   // if we have both operators it means we also have the operator between them
+    if (_operandOne != INT32_MAX && _operandTwo != INT32_MAX)
     {
-        OPERATION operation = (OPERATION)sender.tag;
-        switch (operation)
+        if (newOperation == PERCENT_OFF)
+        {
+            _operandTwo = _operandTwo * 0.01;
+        }
+        
+        switch (_operator)
         {
             case ADD:
-                _result = _result + inputNr;
+                _operandOne = _operandOne + _operandTwo;
                 break;
-            
+                
             case SUBSTRACT:
-                _result = _result - inputNr;
+                _operandOne = _operandOne - _operandTwo;
                 break;
-            
+                
             case MULTIPLY:
-                _result = _result * inputNr;
+                _operandOne = _operandOne * _operandTwo;
                 break;
-            
+                
             case DIVIDE:
-                _result = _result / inputNr;
-                break;
-            
-            case PERCENT_OFF:
-                _result = inputNr / 100;
-                break;
-                
-            default: //EQUALS
-                
+                _operandOne = _operandOne / _operandTwo;
                 break;
         }
         
-        self.uilNumbersArea.text = [NSString stringWithFormat:@"%f", _result];
-    }
-    else
-    {
-        _result = inputNr;
+        self.uilNumbersArea.text = [NSString stringWithFormat:@"%f", _operandOne];
         
-        [self resetInput];
+        // prepare for next calculus
+        _operandTwo = INT32_MAX;
+        _operator = NONE;
+    
     }
+    // save the missing operator for future reference
+    else if (self.uilNumbersArea.text.length > 0)
+    {
+        double inputData = [self.uilNumbersArea.text doubleValue];
+        if (newOperation == PERCENT_OFF)
+        {
+            inputData = inputData * 0.01;
+        }
+        
+        if (_operandOne == INT32_MAX)
+        {
+            _operandOne = inputData;
+        }
+        else if (_operandTwo == INT32_MAX)
+        {
+            _operandTwo = inputData;
+        }
+    }
+    
+    // save the new operation
+    _operator = newOperation;
 }
 
 

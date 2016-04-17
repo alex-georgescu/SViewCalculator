@@ -31,6 +31,7 @@ extern NSString* const DELETE;
 
 typedef enum
 {
+    NONE = -1,
     EQUALS = 0,
     ADD = 1,
     SUBSTRACT = 2,
