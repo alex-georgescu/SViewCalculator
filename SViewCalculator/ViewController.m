@@ -108,48 +108,6 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
--(void)createDelButton
-{
-    self.uibDelete = [self createCustomButton:self.uibDelete
-                                  parentView:self.view
-                             backgroundColor:[UIColor lightGrayColor]
-                                   withTitle:DELETE
-                                  titleColor:[UIColor blackColor]
-                                 borderColor:[UIColor grayColor]
-                                 borderWidth:1.0f];
-    
-    [self.uibDelete addTarget:self
-                    action:@selector(removeLastDigitFromResult)
-                    forControlEvents:UIControlEventTouchUpInside];
-    
-    NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
-                                            constraintWithItem:self.uibDelete attribute:NSLayoutAttributeLeft
-                                            relatedBy:NSLayoutRelationEqual
-                                            toItem:self.uilNumbersArea attribute:NSLayoutAttributeLeft
-                                            multiplier:1.0 constant:0];
-    
-    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibDelete attribute:NSLayoutAttributeTop
-                                           relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uilNumbersArea attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:5];
-    
-    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                            constraintWithItem:self.uibDelete attribute:NSLayoutAttributeWidth
-                                            relatedBy:NSLayoutRelationEqual
-                                            toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
-                                            multiplier:0.25 constant:0];
-    
-    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                            constraintWithItem:self.uibDelete attribute:NSLayoutAttributeHeight
-                                            relatedBy:NSLayoutRelationEqual
-                                            toItem:self.view attribute:NSLayoutAttributeHeight
-                                            multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
-    
-    [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
-}
-
-
 -(void)createResetButton
 {
     self.uibReset = [self createCustomButton:self.uibReset
@@ -161,15 +119,15 @@ shouldChangeCharactersInRange:(NSRange)range
                                  borderWidth:1.0f];
     
     [self.uibReset addTarget:self
-                   action:@selector(resetInput)
-                   forControlEvents:UIControlEventTouchUpInside];
+                      action:@selector(resetInput)
+            forControlEvents:UIControlEventTouchUpInside];
     
-    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
+    NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uibReset
                                             attribute:NSLayoutAttributeLeft
                                             relatedBy:NSLayoutRelationEqual
-                                            toItem:self.uibDelete
-                                            attribute:NSLayoutAttributeRight
+                                            toItem:self.uilNumbersArea
+                                            attribute:NSLayoutAttributeLeft
                                             multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
@@ -181,13 +139,256 @@ shouldChangeCharactersInRange:(NSRange)range
                                            multiplier:1.0 constant:5];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibReset attribute:NSLayoutAttributeWidth
+                                             constraintWithItem:self.uibReset
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
+                                             multiplier:0.25 constant:0];
+    
+    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
+                                              constraintWithItem:self.uibReset
+                                              attribute:NSLayoutAttributeHeight
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view
+                                              attribute:NSLayoutAttributeHeight
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
+    
+    [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
+}
+
+
+// " ( "
+-(void)createOpenParanthesesButton
+{
+    self.uibOpenParantheses = [self createCustomButton:self.uibOpenParantheses
+                                   parentView:self.view
+                              backgroundColor:[UIColor lightGrayColor]
+                                    withTitle:OPEN_PARANTHESES
+                                   titleColor:[UIColor blackColor]
+                                  borderColor:[UIColor grayColor]
+                                  borderWidth:1.0f];
+    
+    
+    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibOpenParantheses
+                                             attribute:NSLayoutAttributeLeft
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uibReset
+                                             attribute:NSLayoutAttributeRight
+                                             multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
+                                           constraintWithItem:self.uibOpenParantheses
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uilNumbersArea
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:5];
+    
+    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibOpenParantheses
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
+                                             multiplier:0.25 constant:0];
+    
+    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
+                                              constraintWithItem:self.uibOpenParantheses
+                                              attribute:NSLayoutAttributeHeight
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view
+                                              attribute:NSLayoutAttributeHeight
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
+    
+    [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
+}
+
+
+// " ) "
+-(void)createClosedParanthesesButton
+{
+    self.uibClosedParantheses = [self createCustomButton:self.uibClosedParantheses
+                                  parentView:self.view
+                             backgroundColor:[UIColor lightGrayColor]
+                                   withTitle:CLOSED_PARANTHESES
+                                  titleColor:[UIColor blackColor]
+                                 borderColor:[UIColor grayColor]
+                                 borderWidth:1.0f];
+    
+    
+    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibClosedParantheses
+                                             attribute:NSLayoutAttributeLeft
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uibOpenParantheses
+                                             attribute:NSLayoutAttributeRight
+                                             multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
+                                           constraintWithItem:self.uibClosedParantheses
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uilNumbersArea
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:5];
+    
+    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibClosedParantheses
+                                             attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
                                              multiplier:0.25 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibReset attribute:NSLayoutAttributeHeight
+                                              constraintWithItem:self.uibClosedParantheses
+                                              attribute:NSLayoutAttributeHeight
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view attribute:NSLayoutAttributeHeight
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
+    
+    [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
+}
+
+
+-(void)createDelButton
+{
+    self.uibDelete = [self createCustomButton:self.uibDelete
+                                   parentView:self.view
+                              backgroundColor:[UIColor lightGrayColor]
+                                    withTitle:DELETE
+                                   titleColor:[UIColor blackColor]
+                                  borderColor:[UIColor grayColor]
+                                  borderWidth:1.0f];
+    
+    [self.uibDelete addTarget:self
+                       action:@selector(removeLastDigitFromResult)
+             forControlEvents:UIControlEventTouchUpInside];
+    
+    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibDelete
+                                             attribute:NSLayoutAttributeLeft
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uibClosedParantheses
+                                             attribute:NSLayoutAttributeRight
+                                             multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
+                                           constraintWithItem:self.uibDelete
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uilNumbersArea
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:5];
+    
+    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibDelete
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
+                                             multiplier:0.25 constant:0];
+    
+    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
+                                              constraintWithItem:self.uibDelete
+                                              attribute:NSLayoutAttributeHeight
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view attribute:NSLayoutAttributeHeight
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
+    
+    [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
+}
+
+
+// X power Y
+-(void)createPowerYButton
+{
+    self.uibPowerY = [self createCustomButton:self.uibPowerY
+                                    parentView:self.view
+                               backgroundColor:[UIColor lightGrayColor]
+                                     withTitle:POWER
+                                    titleColor:[UIColor blackColor]
+                                   borderColor:[UIColor grayColor]
+                                   borderWidth:1.0f];
+    
+    
+    
+    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
+                                           constraintWithItem:self.uibPowerY
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uibReset
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibPowerY
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
+                                             multiplier:0.25 constant:0];
+    
+    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
+                                              constraintWithItem:self.uibPowerY
+                                              attribute:NSLayoutAttributeHeight
+                                              relatedBy:NSLayoutRelationEqual
+                                              toItem:self.view attribute:NSLayoutAttributeHeight
+                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
+    
+    NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
+                                            constraintWithItem:self.uibPowerY
+                                            attribute:NSLayoutAttributeLeft
+                                            relatedBy:NSLayoutRelationEqual
+                                            toItem:self.uilNumbersArea
+                                            attribute:NSLayoutAttributeLeft
+                                            multiplier:1.0 constant:0];
+    
+    [self.view addConstraints:@[tfTopConstraint, tfLeftConstraint, tfWidthConstraint, tfHeightConstraint]];
+}
+
+
+// Y-th root of X
+-(void)createRootYButton
+{
+    self.uibRootY = [self createCustomButton:self.uibRootY
+                                parentView:self.view
+                           backgroundColor:[UIColor lightGrayColor]
+                                 withTitle:ROOT
+                                titleColor:[UIColor blackColor]
+                               borderColor:[UIColor grayColor]
+                               borderWidth:1.0f];
+    
+    
+    
+    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibRootY
+                                             attribute:NSLayoutAttributeLeft
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uibPowerY
+                                             attribute:NSLayoutAttributeRight
+                                             multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
+                                           constraintWithItem:self.uibRootY
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uibOpenParantheses
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:0];
+    
+    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.uibRootY
+                                             attribute:NSLayoutAttributeWidth
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
+                                             multiplier:0.25 constant:0];
+    
+    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
+                                              constraintWithItem:self.uibRootY
+                                              attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
                                               multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
@@ -217,7 +418,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibPercent
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibReset
+                                             toItem:self.uibRootY
                                              attribute:NSLayoutAttributeRight
                                              multiplier:1.0 constant:0];
     
@@ -225,14 +426,16 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uibPercent
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uilNumbersArea
+                                           toItem:self.uibClosedParantheses
                                            attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:5];
+                                           multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibPercent attribute:NSLayoutAttributeWidth
+                                             constraintWithItem:self.uibPercent
+                                             attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
                                              multiplier:0.25 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
@@ -272,21 +475,27 @@ shouldChangeCharactersInRange:(NSRange)range
                                              multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibDiv attribute:NSLayoutAttributeTop
+                                           constraintWithItem:self.uibDiv
+                                           attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uilNumbersArea attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:5];
+                                           toItem:self.uibDelete
+                                           attribute: NSLayoutAttributeBottom
+                                           multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibDiv attribute:NSLayoutAttributeWidth
+                                             constraintWithItem:self.uibDiv
+                                             attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
+                                             toItem:self.uilNumbersArea
+                                             attribute:NSLayoutAttributeWidth
                                              multiplier:0.25 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibDiv attribute:NSLayoutAttributeHeight
+                                              constraintWithItem:self.uibDiv
+                                              attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
-                                              toItem:self.view attribute:NSLayoutAttributeHeight
+                                              toItem:self.view
+                                              attribute:NSLayoutAttributeHeight
                                               multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
     
     [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
@@ -310,8 +519,10 @@ shouldChangeCharactersInRange:(NSRange)range
                                             multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uib7 attribute:NSLayoutAttributeTop
-                                           relatedBy:NSLayoutRelationEqual toItem:self.uibDelete
+                                           constraintWithItem:self.uib7
+                                           attribute:NSLayoutAttributeTop
+                                           relatedBy:NSLayoutRelationEqual
+                                           toItem:self.uibPowerY
                                            attribute: NSLayoutAttributeBottom
                                            multiplier:1.0 constant:0];
     
@@ -353,7 +564,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uib8
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uibReset
+                                           toItem:self.uibRootY
                                            attribute: NSLayoutAttributeBottom
                                            multiplier:1.0 constant:0];
     
@@ -997,8 +1208,13 @@ shouldChangeCharactersInRange:(NSRange)range
     [self createResultTextArea];
     
     // create and align calculating buttons
-    [self createDelButton];
     [self createResetButton];
+    [self createOpenParanthesesButton];
+    [self createClosedParanthesesButton];
+    [self createDelButton];
+    
+    [self createPowerYButton];
+    [self createRootYButton];
     [self createPercentButton];
     [self createDivisionButton];
     

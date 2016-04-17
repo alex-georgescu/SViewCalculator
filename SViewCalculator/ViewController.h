@@ -11,6 +11,10 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) UITextField *uilNumbersArea;
+@property (strong, nonatomic) UIButton *uibOpenParantheses;
+@property (strong, nonatomic) UIButton *uibClosedParantheses;
+@property (strong, nonatomic) UIButton *uibPowerY;
+@property (strong, nonatomic) UIButton *uibRootY;
 @property (strong, nonatomic) UIButton *uibDelete;
 @property (strong, nonatomic) UIButton *uibReset;
 @property (strong, nonatomic) UIButton *uibPercent;

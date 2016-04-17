@@ -36,6 +36,10 @@ NSString* const DIVISION = @"÷";
 NSString* const PERCENTAGE = @"%";
 NSString* const RESET = @"C";
 NSString* const DELETE = @"⌫";
+NSString* const OPEN_PARANTHESES = @"(";
+NSString* const CLOSED_PARANTHESES = @")";
+NSString* const POWER = @"x^y";
+NSString* const ROOT = @"y√x";
 
 double const BUTTON_HEIGHT_MULTIPLIER = 0.12;
 
