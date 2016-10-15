@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 
-@interface Constants ()
-
-@end
-
 
 @implementation Constants
 
@@ -30,7 +26,7 @@ NSString* const DOT = @".";
 NSString* const SIGNS = @"+/-";
 NSString* const EQUALITY = @"=";
 NSString* const ADDITION = @"+";
-NSString* const SUBSTRACTION = @"-";
+NSString* const SUBTRACTION = @"-";
 NSString* const MULTIPLICATION = @"x";
 NSString* const DIVISION = @"÷";
 NSString* const PERCENTAGE = @"%";
@@ -41,6 +37,8 @@ NSString* const CLOSED_PARANTHESES = @")";
 NSString* const POWER = @"x^y";
 NSString* const ROOT = @"y√x";
 
+
 double const BUTTON_HEIGHT_MULTIPLIER = 0.12;
+
 
 @end

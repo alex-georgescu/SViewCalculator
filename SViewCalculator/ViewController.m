@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Constants.h"
+#import "OperationsWrapper.h"
 
 
 @implementation ViewController
@@ -169,6 +170,9 @@ shouldChangeCharactersInRange:(NSRange)range
                                   borderColor:[UIColor grayColor]
                                   borderWidth:1.0f];
     
+    [self.uibOpenParantheses addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibOpenParantheses
@@ -217,6 +221,9 @@ shouldChangeCharactersInRange:(NSRange)range
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
     
+    [self.uibClosedParantheses addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibClosedParantheses
@@ -312,6 +319,9 @@ shouldChangeCharactersInRange:(NSRange)range
                                    borderColor:[UIColor grayColor]
                                    borderWidth:1.0f];
     
+    [self.uibPowerY addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
@@ -360,6 +370,9 @@ shouldChangeCharactersInRange:(NSRange)range
                                borderColor:[UIColor grayColor]
                                borderWidth:1.0f];
     
+    [self.uibRootY addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
@@ -408,11 +421,9 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
    
-    self.uibPercent.tag = PERCENT_OFF;
-    
     [self.uibPercent addTarget:self
-                     action:@selector(calculateResult:)
-                     forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPercent
@@ -459,12 +470,9 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
-    self.uibDiv.tag = DIVIDE;
-    
     [self.uibDiv addTarget:self
-                    action:@selector(calculateResult:)
-                 forControlEvents:UIControlEventTouchUpInside];
-
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibDiv
@@ -512,6 +520,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uib7 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uib7 attribute:NSLayoutAttributeLeft
                                             relatedBy:NSLayoutRelationEqual toItem:self.uilNumbersArea
@@ -551,6 +563,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uib8 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib8
@@ -593,6 +609,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uib9 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib9
@@ -637,11 +657,9 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
-    self.uibMultiply.tag = MULTIPLY;
-    
     [self.uibMultiply addTarget:self
-                         action:@selector(calculateResult:)
-        forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibMultiply
@@ -685,6 +703,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uib4 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uib4
                                             attribute:NSLayoutAttributeLeft
@@ -726,6 +748,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uib5 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib5
@@ -769,6 +795,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uib6 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib6
                                              attribute:NSLayoutAttributeLeft
@@ -807,16 +837,14 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibMinus = [self createCustomButton:self.uibMinus
                   parentView:self.view
              backgroundColor:[UIColor orangeColor]
-                   withTitle:SUBSTRACTION
+                   withTitle:SUBTRACTION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
-    self.uibMinus.tag = SUBSTRACT;
-    
     [self.uibMinus addTarget:self
-                      action:@selector(calculateResult:)
-                    forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibMinus
@@ -860,6 +888,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uib1 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfLeftConstraint = [NSLayoutConstraint
                                             constraintWithItem:self.uib1
                                             attribute:NSLayoutAttributeLeft
@@ -902,6 +934,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uib2 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib2
                                              attribute:NSLayoutAttributeLeft
@@ -943,6 +979,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uib3 addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uib3
@@ -987,11 +1027,9 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
-    self.uibPlus.tag = ADD;
-    
     [self.uibPlus addTarget:self
-                  action:@selector(calculateResult:)
-                  forControlEvents:UIControlEventTouchUpInside];
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibPlus
@@ -1035,6 +1073,10 @@ shouldChangeCharactersInRange:(NSRange)range
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
     
+    [self.uibZero addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibZero
                                              attribute:NSLayoutAttributeLeft
@@ -1076,6 +1118,10 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
+    
+    [self.uibDot addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibDot
@@ -1119,6 +1165,10 @@ shouldChangeCharactersInRange:(NSRange)range
                                borderColor:[UIColor grayColor]
                                borderWidth:1.0f];
     
+    [self.uibSign addTarget:self
+                     action:@selector(addToInput:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
                                              constraintWithItem:self.uibSign
                                              attribute:NSLayoutAttributeLeft
@@ -1161,8 +1211,6 @@ shouldChangeCharactersInRange:(NSRange)range
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
-    
-    self.uibEquals.tag = EQUALS;
     
     [self.uibEquals addTarget:self
                        action:@selector(calculateResult:)
@@ -1260,70 +1308,18 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
-double _operandOne = INT32_MAX;
-double _operandTwo = INT32_MAX;
-OPERATION _operator = NONE;
+-(void)addToInput : (UIButton*) sender
+{
+    self.uilNumbersArea.text = [self.uilNumbersArea.text stringByAppendingString:sender.titleLabel.text];
+}
 
 
 -(void)calculateResult : (UIButton*) sender
 {
-    OPERATION newOperation = (OPERATION)sender.tag;
+    OperationsWrapper* opWrap = [[OperationsWrapper alloc] init];
+    [opWrap initMetadata];
     
-   // if we have both operators it means we also have the operator between them
-    if (_operandOne != INT32_MAX && _operandTwo != INT32_MAX)
-    {
-        if (newOperation == PERCENT_OFF)
-        {
-            _operandTwo = _operandTwo * 0.01;
-        }
-        
-        switch (_operator)
-        {
-            case ADD:
-                _operandOne = _operandOne + _operandTwo;
-                break;
-                
-            case SUBSTRACT:
-                _operandOne = _operandOne - _operandTwo;
-                break;
-                
-            case MULTIPLY:
-                _operandOne = _operandOne * _operandTwo;
-                break;
-                
-            case DIVIDE:
-                _operandOne = _operandOne / _operandTwo;
-                break;
-        }
-        
-        self.uilNumbersArea.text = [NSString stringWithFormat:@"%f", _operandOne];
-        
-        // prepare for next calculus
-        _operandTwo = INT32_MAX;
-        _operator = NONE;
-    
-    }
-    // save the missing operator for future reference
-    else if (self.uilNumbersArea.text.length > 0)
-    {
-        double inputData = [self.uilNumbersArea.text doubleValue];
-        if (newOperation == PERCENT_OFF)
-        {
-            inputData = inputData * 0.01;
-        }
-        
-        if (_operandOne == INT32_MAX)
-        {
-            _operandOne = inputData;
-        }
-        else if (_operandTwo == INT32_MAX)
-        {
-            _operandTwo = inputData;
-        }
-    }
-    
-    // save the new operation
-    _operator = newOperation;
+    NSLog(@"postfix: %@", [opWrap infixToPostfix: self.uilNumbersArea.text]);
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B148511D6A56E200CC9741 /* OperationsWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B148501D6A56E200CC9741 /* OperationsWrapper.m */; };
 		17D96A641C3988FF000738EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A631C3988FF000738EB /* main.m */; };
 		17D96A671C3988FF000738EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A661C3988FF000738EB /* AppDelegate.m */; };
 		17D96A6A1C3988FF000738EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A691C3988FF000738EB /* ViewController.m */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		17076C321C3B346000CB88BD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		17B148501D6A56E200CC9741 /* OperationsWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationsWrapper.m; sourceTree = "<group>"; };
+		17B148521D6A570000CC9741 /* OperationsWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationsWrapper.h; sourceTree = "<group>"; };
 		17D96A5F1C3988FF000738EB /* SViewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SViewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D96A631C3988FF000738EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17D96A651C3988FF000738EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				17D96A631C3988FF000738EB /* main.m */,
 				17D96A971C39DF17000738EB /* Constants.m */,
 				17076C321C3B346000CB88BD /* Constants.h */,
+				17B148501D6A56E200CC9741 /* OperationsWrapper.m */,
+				17B148521D6A570000CC9741 /* OperationsWrapper.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,7 +213,7 @@
 		17D96A571C3988FF000738EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Alex Georgescu";
 				TargetAttributes = {
 					17D96A5E1C3988FF000738EB = {
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B148511D6A56E200CC9741 /* OperationsWrapper.m in Sources */,
 				17D96A6A1C3988FF000738EB /* ViewController.m in Sources */,
 				17D96A671C3988FF000738EB /* AppDelegate.m in Sources */,
 				17D96A641C3988FF000738EB /* main.m in Sources */,
@@ -351,8 +357,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -374,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -395,8 +403,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -412,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,7 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SViewCalculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AG.SViewCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SViewCalculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AG.SViewCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AG.SViewCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_TARGET_NAME = SViewCalculator;
 				USES_XCTRUNNER = YES;
 			};
@@ -485,8 +496,10 @@
 			buildSettings = {
 				INFOPLIST_FILE = SViewCalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = AG.SViewCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_TARGET_NAME = SViewCalculator;
 				USES_XCTRUNNER = YES;
 			};

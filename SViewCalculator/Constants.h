@@ -22,7 +22,7 @@ extern NSString* const DOT;
 extern NSString* const SIGNS;
 extern NSString* const EQUALITY;
 extern NSString* const ADDITION;
-extern NSString* const SUBSTRACTION;
+extern NSString* const SUBTRACTION;
 extern NSString* const MULTIPLICATION;
 extern NSString* const DIVISION;
 extern NSString* const PERCENTAGE;
@@ -34,6 +34,7 @@ extern NSString* const POWER;
 extern NSString* const ROOT;
 
 extern double const BUTTON_HEIGHT_MULTIPLIER;
+
 
 typedef enum
 {
