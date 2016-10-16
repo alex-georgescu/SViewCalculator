@@ -1319,7 +1319,13 @@ shouldChangeCharactersInRange:(NSRange)range
     OperationsWrapper* opWrap = [[OperationsWrapper alloc] init];
     [opWrap initMetadata];
     
-    NSLog(@"postfix: %@", [opWrap infixToPostfix: self.uilNumbersArea.text]);
+    NSString* evaluatedInput = [opWrap infixToPostfix: self.uilNumbersArea.text];
+    NSLog(@"postfix: %@", evaluatedInput);
+    
+    NSString* evaluatedPostfix = [opWrap evaluatePostfix: evaluatedInput];
+    NSLog(@"result: %@", evaluatedPostfix);
+    
+    self.uilNumbersArea.text = evaluatedPostfix;
 }
 
 

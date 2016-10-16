@@ -35,7 +35,7 @@ NSString* const DELETE = @"⌫";
 NSString* const OPEN_PARANTHESES = @"(";
 NSString* const CLOSED_PARANTHESES = @")";
 NSString* const POWER = @"x^y";
-NSString* const ROOT = @"y√x";
+NSString* const ROOT = @"n√x";
 
 
 double const BUTTON_HEIGHT_MULTIPLIER = 0.12;

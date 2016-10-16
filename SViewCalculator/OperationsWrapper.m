@@ -6,6 +6,7 @@
 //  Copyright © 2016 Alex Georgescu. All rights reserved.
 //
 
+#include <math.h>
 #import "OperationsWrapper.h"
 #import "Constants.h"
 
@@ -74,5 +75,98 @@
     
     return postfix;
 }
+
+
+-(NSString*) evaluatePostfix :(NSString*) postfixExp
+{
+    /*
+     1. Scan the Postfix string from left to right.
+     2. Initialise an empty stack.
+     3. If the scannned character is an operand, add it to the stack. If the scanned character is an operator, there will be atleast two operands in the stack.
+     4. If the scanned character is an Operator, then we store the top most element of the stack(topStack) in a variable temp. Pop the stack. Now evaluate topStack(Operator)temp. Let the result of this operation be retVal. Pop the stack and Push retVal into the stack.
+     5. Repeat this step till all the characters are scanned.
+     6. After all characters are scanned, we will have only one element in the stack. Return topStack.
+    */
+    
+    NSString* result = [[NSString alloc] init];
+    NSString* postfixChar;
+    NSMutableArray* stack = [[NSMutableArray alloc] init];
+
+    for(int i = 0; i < postfixExp.length; i++)
+    {
+        postfixChar = [postfixExp substringWithRange:NSMakeRange(i, 1)];
+        
+        //operator
+        if ([GlobalOperators valueForKey:(postfixChar)])
+        {
+            if (stack.count >= 2)
+            {
+                NSNumberFormatter *nrFormatter = [[NSNumberFormatter alloc] init];
+                nrFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+                
+                NSNumber *operator1 = [nrFormatter numberFromString:stack[stack.count - 1]];
+                [stack removeLastObject];
+                
+                NSNumber *operator2 = [nrFormatter numberFromString:stack[stack.count - 1]];
+                [stack removeLastObject];
+                
+                NSNumber* quickRes = @([operator1 doubleValue]);
+                if (postfixChar == ADDITION)
+                {
+                    quickRes = @([quickRes doubleValue] + [ operator2 doubleValue]);
+                }
+                else if (postfixChar == SUBTRACTION)
+                {
+                    quickRes = @([quickRes doubleValue] - [ operator2 doubleValue]);
+                }
+                else if (postfixChar == MULTIPLICATION)
+                {
+                    quickRes = @([quickRes doubleValue] * [ operator2 doubleValue]);
+                }
+                else if (postfixChar == DIVISION)
+                {
+                    quickRes = @([quickRes doubleValue] / [ operator2 doubleValue]);
+                }
+                else if (postfixChar == POWER)
+                {
+                    quickRes = @(pow([quickRes doubleValue], [ operator2 doubleValue]));
+                }
+                else if (postfixChar == ROOT)
+                {
+                    quickRes = @(pow([operator2 doubleValue], 1.0/[quickRes doubleValue]));
+                }
+                else if (postfixChar == OPEN_PARANTHESES)
+                {
+                
+                }
+                else if (postfixChar == CLOSED_PARANTHESES)
+                {
+                
+                }
+                
+                NSString* newOperand = [quickRes stringValue];
+                [stack addObject:newOperand];
+            }
+            else
+            {
+                result = @"Error parsing the expression. Please check it and try again.";
+                break;
+            }
+        }
+        // operand
+        else
+        {
+            [stack addObject:postfixChar];
+        }
+    }
+    
+    if (result.length == 0 && stack.count == 1)
+        result = stack[stack.count - 1];
+    
+    [stack removeAllObjects];
+    
+    return result;
+}
+
 
 @end
