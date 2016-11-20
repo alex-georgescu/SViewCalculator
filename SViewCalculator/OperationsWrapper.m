@@ -50,7 +50,7 @@
             }
             else
             {
-                while ([GlobalOperators valueForKey:stack[stack.count - 1]] > charSelected && stack.count > 0)
+                while ([GlobalOperators valueForKey:stack[stack.count - 1]] > [GlobalOperators valueForKey:(charSelected)] && stack.count > 0)
                 {
                     postfix = [postfix stringByAppendingString:stack[stack.count - 1]];
 
@@ -111,35 +111,35 @@
                 [stack removeLastObject];
                 
                 NSNumber* quickRes = @([operator1 doubleValue]);
-                if (postfixChar == ADDITION)
+                if ([postfixChar isEqualToString: ADDITION])
                 {
                     quickRes = @([quickRes doubleValue] + [ operator2 doubleValue]);
                 }
-                else if (postfixChar == SUBTRACTION)
+                else if ([postfixChar isEqualToString: SUBTRACTION])
                 {
                     quickRes = @([quickRes doubleValue] - [ operator2 doubleValue]);
                 }
-                else if (postfixChar == MULTIPLICATION)
+                else if ([postfixChar isEqualToString: MULTIPLICATION])
                 {
                     quickRes = @([quickRes doubleValue] * [ operator2 doubleValue]);
                 }
-                else if (postfixChar == DIVISION)
+                else if ([postfixChar isEqualToString: DIVISION])
                 {
                     quickRes = @([quickRes doubleValue] / [ operator2 doubleValue]);
                 }
-                else if (postfixChar == POWER)
+                else if ([postfixChar isEqualToString: POWER])
                 {
                     quickRes = @(pow([quickRes doubleValue], [ operator2 doubleValue]));
                 }
-                else if (postfixChar == ROOT)
+                else if ([postfixChar isEqualToString: ROOT])
                 {
                     quickRes = @(pow([operator2 doubleValue], 1.0/[quickRes doubleValue]));
                 }
-                else if (postfixChar == OPEN_PARANTHESES)
+                else if ([postfixChar isEqualToString: OPEN_PARANTHESES])
                 {
                 
                 }
-                else if (postfixChar == CLOSED_PARANTHESES)
+                else if ([postfixChar isEqualToString: CLOSED_PARANTHESES])
                 {
                 
                 }
