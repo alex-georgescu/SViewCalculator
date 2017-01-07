@@ -19,21 +19,21 @@
 }
 
 
--(NSString*) infixToPostfix :(NSString*) infix
+-(NSMutableArray*) infixToPostfix :(NSString*) infix
 {
     /*
      1. scan infix from left to right
-     2. create a STACK and POSTFIX string
-     3. if the scanned char is an operand, add it to the POSTFIX string;
+     2. create a STACK and POSTFIX
+     3. if the scanned char is an operand, add it to the POSTFIX;
         if the scanned char is an operator:
         - if STACK is empty, push it to STACK
         - if STACK is NOT empty, compare the precedence; if top-stack has higher precedence, pop the STACK and add to POSTFIX, else push the scanned char on to the STACK; repeat while STACK is NOT empty and top-stack has higher precedence than scanned character
-     4. while STACK is not empty, pop and add to POSTFIX string
+     4. while STACK is not empty, pop and add to POSTFIX
      5. return POSTFIX
     */
     
     
-    NSString* postfix = [[NSString alloc] init];
+    NSMutableArray* postfix = [[NSMutableArray alloc] init];
     NSMutableArray* stack = [[NSMutableArray alloc] init];
     NSString* charSelected = NULL;
     
@@ -50,10 +50,10 @@
             }
             else
             {
-                while ([GlobalOperators valueForKey:stack[stack.count - 1]] > [GlobalOperators valueForKey:(charSelected)] && stack.count > 0)
+                while (stack.count > 0 && [GlobalOperators valueForKey:stack[stack.count - 1]] >= [GlobalOperators valueForKey:(charSelected)])
                 {
-                    postfix = [postfix stringByAppendingString:stack[stack.count - 1]];
-
+                    [postfix addObject:stack[stack.count - 1]];
+                    
                     [stack removeLastObject];
                 }
                 
@@ -62,13 +62,13 @@
         }
         else
         {
-            postfix = [postfix stringByAppendingString:charSelected];
+            [postfix addObject:charSelected];
         }
     }
              
     while (stack.count > 0)
     {
-        postfix = [postfix stringByAppendingString:stack[stack.count - 1]];
+        [postfix addObject:stack[stack.count - 1]];
 
         [stack removeLastObject];
     }
@@ -77,7 +77,7 @@
 }
 
 
--(NSString*) evaluatePostfix :(NSString*) postfixExp
+-(NSString*) evaluatePostfix :(NSMutableArray*) postfixExp
 {
     /*
      1. Scan the Postfix string from left to right.
@@ -92,9 +92,9 @@
     NSString* postfixChar;
     NSMutableArray* stack = [[NSMutableArray alloc] init];
 
-    for(int i = 0; i < postfixExp.length; i++)
+    for(int i = 0; i < postfixExp.count; i++)
     {
-        postfixChar = [postfixExp substringWithRange:NSMakeRange(i, 1)];
+        postfixChar = [postfixExp objectAtIndex:(i)];
         
         //operator
         if ([GlobalOperators valueForKey:(postfixChar)])
@@ -110,30 +110,30 @@
                 NSNumber *operator2 = [nrFormatter numberFromString:stack[stack.count - 1]];
                 [stack removeLastObject];
                 
-                NSNumber* quickRes = @([operator1 doubleValue]);
+                NSNumber* quickRes;
                 if ([postfixChar isEqualToString: ADDITION])
                 {
-                    quickRes = @([quickRes doubleValue] + [ operator2 doubleValue]);
+                    quickRes = @([operator2 doubleValue] + [ operator1 doubleValue]);
                 }
                 else if ([postfixChar isEqualToString: SUBTRACTION])
                 {
-                    quickRes = @([quickRes doubleValue] - [ operator2 doubleValue]);
+                    quickRes = @([operator2 doubleValue] - [ operator1 doubleValue]);
                 }
                 else if ([postfixChar isEqualToString: MULTIPLICATION])
                 {
-                    quickRes = @([quickRes doubleValue] * [ operator2 doubleValue]);
+                    quickRes = @([operator2 doubleValue] * [ operator1 doubleValue]);
                 }
                 else if ([postfixChar isEqualToString: DIVISION])
                 {
-                    quickRes = @([quickRes doubleValue] / [ operator2 doubleValue]);
+                    quickRes = @([operator2 doubleValue] / [ operator1 doubleValue]);
                 }
                 else if ([postfixChar isEqualToString: POWER])
                 {
-                    quickRes = @(pow([quickRes doubleValue], [ operator2 doubleValue]));
+                    quickRes = @(pow([operator2 doubleValue], [ operator1 doubleValue]));
                 }
                 else if ([postfixChar isEqualToString: ROOT])
                 {
-                    quickRes = @(pow([operator2 doubleValue], 1.0/[quickRes doubleValue]));
+                    quickRes = @(pow([operator2 doubleValue], 1.0/[operator1 doubleValue]));
                 }
                 else if ([postfixChar isEqualToString: OPEN_PARANTHESES])
                 {

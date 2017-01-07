@@ -1285,7 +1285,6 @@ shouldChangeCharactersInRange:(NSRange)range
     [self createDotButton];
     [self createSignButton];
     [self createEqualsButton];
-
 }
 
 
@@ -1310,7 +1309,7 @@ shouldChangeCharactersInRange:(NSRange)range
 
 -(void)addToInput : (UIButton*) sender
 {
-    self.uilNumbersArea.text = [self.uilNumbersArea.text stringByAppendingString:sender.titleLabel.text];
+    [self.uilNumbersArea replaceRange:self.uilNumbersArea.selectedTextRange withText:sender.titleLabel.text];
 }
 
 
@@ -1319,7 +1318,7 @@ shouldChangeCharactersInRange:(NSRange)range
     OperationsWrapper* opWrap = [[OperationsWrapper alloc] init];
     [opWrap initMetadata];
     
-    NSString* evaluatedInput = [opWrap infixToPostfix: self.uilNumbersArea.text];
+    NSMutableArray* evaluatedInput = [opWrap infixToPostfix: self.uilNumbersArea.text];
     NSLog(@"postfix: %@", evaluatedInput);
     
     NSString* evaluatedPostfix = [opWrap evaluatePostfix: evaluatedInput];
