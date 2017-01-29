@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Constants.h"
 #import "OperationsWrapper.h"
+#import "RegexKitLite.h"
 
 
 @implementation ViewController
@@ -1318,13 +1319,101 @@ shouldChangeCharactersInRange:(NSRange)range
     OperationsWrapper* opWrap = [[OperationsWrapper alloc] init];
     [opWrap initMetadata];
     
-    NSMutableArray* evaluatedInput = [opWrap infixToPostfix: self.uilNumbersArea.text];
-    NSLog(@"postfix: %@", evaluatedInput);
+    //Parse user input and split it into OPERANDS and OPERATORS
+    //According to Apple's documentation, these characters must be quoted (using \) to be treated as literals:
+    //* ? + [ ( ) { } ^ $ | \ . /
+    NSMutableArray* infixInputArray = [[NSMutableArray alloc] init];
+    NSString* userInputString = self.uilNumbersArea.text;
+    NSString* regexPattern = @"(?=[+-÷x])|(?<=[+-÷x])";
     
-    NSString* evaluatedPostfix = [opWrap evaluatePostfix: evaluatedInput];
+    NSArray* regexMatches = [userInputString componentsSeparatedByRegex:regexPattern];
+    for (NSString* matched in regexMatches)
+    {
+        //validate operator (ex: it only has 1 decimal point)
+        if ([matched componentsSeparatedByString:@"."].count > 2)
+        {
+            //TODO:
+            NSLog(@"Oops! Operand %@ has more than 1 decimal point.", matched);
+            return;
+        }
+        
+        if (matched.length > 0)
+        {
+            [infixInputArray addObject:matched];
+        }
+    }
+
+    NSMutableArray* evaluatedInputArray = [opWrap infixToPostfix: infixInputArray];
+    NSLog(@"postfix: %@", evaluatedInputArray);
+    
+    NSString* evaluatedPostfix = [opWrap evaluatePostfix: evaluatedInputArray];
     NSLog(@"result: %@", evaluatedPostfix);
     
     self.uilNumbersArea.text = evaluatedPostfix;
+}
+
+
+-(NSArray*) split:(NSString *)str useRegex:(NSRegularExpression *) regex
+{
+    NSRange range = NSMakeRange(0, str.length);
+    
+    //get locations of matches
+    NSMutableArray* matchingRanges = [NSMutableArray array];
+    NSArray* matches = [regex matchesInString:str options:0 range:range];
+    for(NSTextCheckingResult* match in matches)
+    {
+        [matchingRanges addObject:[NSValue valueWithRange:match.range]];
+    }
+    
+    //invert ranges - get ranges of non-matched pieces
+    NSMutableArray* pieceRanges = [NSMutableArray array];
+    
+    //add first range
+    [pieceRanges addObject:[NSValue valueWithRange:NSMakeRange(0,
+                                                               (matchingRanges.count == 0 ? str.length : [matchingRanges[0] rangeValue].location))]];
+    
+    //add between splits ranges and last range
+    for(int i=0; i<matchingRanges.count; i++){
+        BOOL isLast = i+1 == matchingRanges.count;
+        unsigned long startLoc = [matchingRanges[i] rangeValue].location + [matchingRanges[i] rangeValue].length;
+        unsigned long endLoc = isLast ? str.length : [matchingRanges[i+1] rangeValue].location;
+        [pieceRanges addObject:[NSValue valueWithRange:NSMakeRange(startLoc, endLoc-startLoc)]];
+    }
+    
+    //use split ranges to select pieces
+    NSMutableArray* pieces = [NSMutableArray array];
+    for(NSValue* val in pieceRanges) {
+        NSRange range = [val rangeValue];
+        NSString* piece = [str substringWithRange:range];
+        [pieces addObject:piece];
+    }
+    
+    return pieces;
+}
+
+
+-(bool)isOperator: (NSString*) input
+{
+    if ([input isEqualToString: ADDITION]
+        ||
+        [input isEqualToString: SUBTRACTION]
+        ||
+        [input isEqualToString: MULTIPLICATION]
+        ||
+        [input isEqualToString: DIVISION]
+        ||
+        [input isEqualToString: POWER]
+        ||
+        [input isEqualToString: ROOT]
+        ||
+        [input isEqualToString: OPEN_PARANTHESES]
+        ||
+        [input isEqualToString: CLOSED_PARANTHESES])
+    {
+        return true;
+    }
+    
+    return false;
 }
 
 

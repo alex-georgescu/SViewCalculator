@@ -19,7 +19,7 @@
 }
 
 
--(NSMutableArray*) infixToPostfix :(NSString*) infix
+-(NSMutableArray*) infixToPostfix :(NSMutableArray*) infix
 {
     /*
      1. scan infix from left to right
@@ -35,34 +35,33 @@
     
     NSMutableArray* postfix = [[NSMutableArray alloc] init];
     NSMutableArray* stack = [[NSMutableArray alloc] init];
-    NSString* charSelected = NULL;
     
-    for (int i = 0; i < infix.length; i++)
+    for (NSString* symbol in infix)
     {
-        charSelected = [infix substringWithRange:NSMakeRange(i, 1)];
-        
         // is it an operator?
-        if ([GlobalOperators valueForKey:(charSelected)])
+        if ([GlobalOperators valueForKey:(symbol)])
         {
             if (stack.count == 0)
             {
-                [stack addObject:charSelected];
+                [stack addObject:symbol];
             }
             else
             {
-                while (stack.count > 0 && [GlobalOperators valueForKey:stack[stack.count - 1]] >= [GlobalOperators valueForKey:(charSelected)])
+                while (stack.count > 0
+                       &&
+                       [GlobalOperators valueForKey:stack[stack.count - 1]] >= [GlobalOperators valueForKey:(symbol)])
                 {
                     [postfix addObject:stack[stack.count - 1]];
                     
                     [stack removeLastObject];
                 }
                 
-                [stack addObject:charSelected];
+                [stack addObject:symbol];
             }
         }
         else
         {
-            [postfix addObject:charSelected];
+            [postfix addObject:symbol];
         }
     }
              

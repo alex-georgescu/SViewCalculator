@@ -17,6 +17,9 @@
 		17D96A7D1C3988FF000738EB /* SViewCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A7C1C3988FF000738EB /* SViewCalculatorTests.m */; };
 		17D96A881C3988FF000738EB /* SViewCalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A871C3988FF000738EB /* SViewCalculatorUITests.m */; };
 		17D96A981C39DF17000738EB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A971C39DF17000738EB /* Constants.m */; };
+		9F6E689976D5C1447E7AA4E1 /* Pods_SViewCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E7D72202438A587D4EC4C /* Pods_SViewCalculator.framework */; };
+		A99CAA55E63701028A377BCD /* Pods_SViewCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799E8020251C962FE4A6C10 /* Pods_SViewCalculatorUITests.framework */; };
+		E5B02CBF6D68E6F1D41E7891 /* Pods_SViewCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF236CF59F9D4251FF60A6BF /* Pods_SViewCalculatorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,15 @@
 		17D96A891C3988FF000738EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17D96A961C39A7C4000738EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		17D96A971C39DF17000738EB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		3799E8020251C962FE4A6C10 /* Pods_SViewCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SViewCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE82F0C58D0A819AF4457AC /* Pods-SViewCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculatorTests/Pods-SViewCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		4AFFC76CAB4A6F60FBD4FE98 /* Pods-SViewCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculatorUITests/Pods-SViewCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5CD3FE1262EDB1FC0800A685 /* Pods-SViewCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		655C564DDB97E76F00B98038 /* Pods-SViewCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		6E7E7D72202438A587D4EC4C /* Pods_SViewCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SViewCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9554B6AEF15229C27EDE54D /* Pods-SViewCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculatorUITests/Pods-SViewCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCAE98038E26E512DEF711B9 /* Pods-SViewCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SViewCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SViewCalculatorTests/Pods-SViewCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF236CF59F9D4251FF60A6BF /* Pods_SViewCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SViewCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6E689976D5C1447E7AA4E1 /* Pods_SViewCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B02CBF6D68E6F1D41E7891 /* Pods_SViewCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99CAA55E63701028A377BCD /* Pods_SViewCalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +107,8 @@
 				17D96A7B1C3988FF000738EB /* SViewCalculatorTests */,
 				17D96A861C3988FF000738EB /* SViewCalculatorUITests */,
 				17D96A601C3988FF000738EB /* Products */,
+				DAE1BED1563212A3534CCE59 /* Pods */,
+				1806D4C3E4A2A81F7D51AC0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +168,29 @@
 			path = SViewCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		1806D4C3E4A2A81F7D51AC0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E7D72202438A587D4EC4C /* Pods_SViewCalculator.framework */,
+				FF236CF59F9D4251FF60A6BF /* Pods_SViewCalculatorTests.framework */,
+				3799E8020251C962FE4A6C10 /* Pods_SViewCalculatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAE1BED1563212A3534CCE59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				655C564DDB97E76F00B98038 /* Pods-SViewCalculator.debug.xcconfig */,
+				5CD3FE1262EDB1FC0800A685 /* Pods-SViewCalculator.release.xcconfig */,
+				FCAE98038E26E512DEF711B9 /* Pods-SViewCalculatorTests.debug.xcconfig */,
+				3DE82F0C58D0A819AF4457AC /* Pods-SViewCalculatorTests.release.xcconfig */,
+				D9554B6AEF15229C27EDE54D /* Pods-SViewCalculatorUITests.debug.xcconfig */,
+				4AFFC76CAB4A6F60FBD4FE98 /* Pods-SViewCalculatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D96A8C1C3988FF000738EB /* Build configuration list for PBXNativeTarget "SViewCalculator" */;
 			buildPhases = (
+				6AA1EE85BA38D5E33CCF25B6 /* [CP] Check Pods Manifest.lock */,
 				17D96A5B1C3988FF000738EB /* Sources */,
 				17D96A5C1C3988FF000738EB /* Frameworks */,
 				17D96A5D1C3988FF000738EB /* Resources */,
+				14935A158411E67BC06590D6 /* [CP] Embed Pods Frameworks */,
+				7095ABF7A59DA656836720E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D96A8F1C3988FF000738EB /* Build configuration list for PBXNativeTarget "SViewCalculatorTests" */;
 			buildPhases = (
+				35043DB14AC871A99EE787B9 /* [CP] Check Pods Manifest.lock */,
 				17D96A741C3988FF000738EB /* Sources */,
 				17D96A751C3988FF000738EB /* Frameworks */,
 				17D96A761C3988FF000738EB /* Resources */,
+				EE1147993C18EEF90AD3B026 /* [CP] Embed Pods Frameworks */,
+				BA4B30164D7584D3242A6864 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D96A921C3988FF000738EB /* Build configuration list for PBXNativeTarget "SViewCalculatorUITests" */;
 			buildPhases = (
+				82726E9BB92A5D0D082C2C3C /* [CP] Check Pods Manifest.lock */,
 				17D96A7F1C3988FF000738EB /* Sources */,
 				17D96A801C3988FF000738EB /* Frameworks */,
 				17D96A811C3988FF000738EB /* Resources */,
+				9FDD5CB87F2C79E33B2ADD89 /* [CP] Embed Pods Frameworks */,
+				E8628D492F5B8EC98900DD44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +327,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14935A158411E67BC06590D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35043DB14AC871A99EE787B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AA1EE85BA38D5E33CCF25B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7095ABF7A59DA656836720E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82726E9BB92A5D0D082C2C3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FDD5CB87F2C79E33B2ADD89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculatorUITests/Pods-SViewCalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA4B30164D7584D3242A6864 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculatorTests/Pods-SViewCalculatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8628D492F5B8EC98900DD44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculatorUITests/Pods-SViewCalculatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1147993C18EEF90AD3B026 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SViewCalculatorTests/Pods-SViewCalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17D96A5B1C3988FF000738EB /* Sources */ = {
@@ -432,6 +619,7 @@
 		};
 		17D96A8D1C3988FF000738EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655C564DDB97E76F00B98038 /* Pods-SViewCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SViewCalculator/Info.plist;
@@ -444,6 +632,7 @@
 		};
 		17D96A8E1C3988FF000738EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD3FE1262EDB1FC0800A685 /* Pods-SViewCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SViewCalculator/Info.plist;
@@ -456,6 +645,7 @@
 		};
 		17D96A901C3988FF000738EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCAE98038E26E512DEF711B9 /* Pods-SViewCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SViewCalculatorTests/Info.plist;
@@ -468,6 +658,7 @@
 		};
 		17D96A911C3988FF000738EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE82F0C58D0A819AF4457AC /* Pods-SViewCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SViewCalculatorTests/Info.plist;
@@ -480,6 +671,7 @@
 		};
 		17D96A931C3988FF000738EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9554B6AEF15229C27EDE54D /* Pods-SViewCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SViewCalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -493,6 +685,7 @@
 		};
 		17D96A941C3988FF000738EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFFC76CAB4A6F60FBD4FE98 /* Pods-SViewCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SViewCalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
