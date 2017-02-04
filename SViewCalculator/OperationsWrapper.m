@@ -98,7 +98,18 @@
         //operator
         if ([GlobalOperators valueForKey:(postfixChar)])
         {
-            if (stack.count >= 2)
+            if ([postfixChar isEqualToString: PERCENTAGE])
+            {
+                NSNumberFormatter *nrFormatter = [[NSNumberFormatter alloc] init];
+                nrFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+                
+                NSNumber *operator = [nrFormatter numberFromString:stack[stack.count - 1]];
+                [stack removeLastObject];
+                
+                NSNumber* quickRes = @([operator doubleValue] / 100);
+                [stack addObject: [quickRes stringValue]];
+            }
+            else if (stack.count >= 2)
             {
                 NSNumberFormatter *nrFormatter = [[NSNumberFormatter alloc] init];
                 nrFormatter.numberStyle = NSNumberFormatterDecimalStyle;

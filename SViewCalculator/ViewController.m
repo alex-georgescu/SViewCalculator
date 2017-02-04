@@ -1324,7 +1324,7 @@ shouldChangeCharactersInRange:(NSRange)range
     //* ? + [ ( ) { } ^ $ | \ . /
     NSMutableArray* infixInputArray = [[NSMutableArray alloc] init];
     NSString* userInputString = self.uilNumbersArea.text;
-    NSString* regexPattern = @"(?=[+-÷x])|(?<=[+-÷x])";
+    NSString* regexPattern = @"(?<=[+-÷x])(\\d+(?:\\.\\d+)?)|(\\d+(?:\\.\\d+)?)(?=[+-÷x])";
     
     NSArray* regexMatches = [userInputString componentsSeparatedByRegex:regexPattern];
     for (NSString* matched in regexMatches)
