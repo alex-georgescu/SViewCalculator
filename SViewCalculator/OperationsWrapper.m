@@ -14,8 +14,8 @@
 
 -(void) initMetadata
 {
-    GlobalOperators = [NSDictionary dictionaryWithObjects:@[@"1",@"1",@"2",@"2",@"2",@"4",@"4",@"3",@"3"]
-                                                         forKeys:@[ADDITION,SUBTRACTION,MULTIPLICATION,DIVISION,PERCENTAGE, OPEN_PARANTHESES,CLOSED_PARANTHESES,POWER,ROOT]];
+    GlobalOperators = [NSDictionary dictionaryWithObjects:@[@"1",@"1",@"2",@"2",@"4",@"4",@"3",@"3"]
+                                                         forKeys:@[ADDITION,SUBTRACTION,MULTIPLICATION,DIVISION, OPEN_PARANTHESES,CLOSED_PARANTHESES,POWER_CARET,ROOT_CARET]];
 }
 
 
@@ -98,18 +98,7 @@
         //operator
         if ([GlobalOperators valueForKey:(postfixChar)])
         {
-            if ([postfixChar isEqualToString: PERCENTAGE])
-            {
-                NSNumberFormatter *nrFormatter = [[NSNumberFormatter alloc] init];
-                nrFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-                
-                NSNumber *operator = [nrFormatter numberFromString:stack[stack.count - 1]];
-                [stack removeLastObject];
-                
-                NSNumber* quickRes = @([operator doubleValue] / 100);
-                [stack addObject: [quickRes stringValue]];
-            }
-            else if (stack.count >= 2)
+            if (stack.count >= 2)
             {
                 NSNumberFormatter *nrFormatter = [[NSNumberFormatter alloc] init];
                 nrFormatter.numberStyle = NSNumberFormatterDecimalStyle;
@@ -137,13 +126,13 @@
                 {
                     quickRes = @([operator2 doubleValue] / [ operator1 doubleValue]);
                 }
-                else if ([postfixChar isEqualToString: POWER])
+                else if ([postfixChar isEqualToString: POWER_CARET])
                 {
                     quickRes = @(pow([operator2 doubleValue], [ operator1 doubleValue]));
                 }
-                else if ([postfixChar isEqualToString: ROOT])
+                else if ([postfixChar isEqualToString: ROOT_CARET])
                 {
-                    quickRes = @(pow([operator2 doubleValue], 1.0/[operator1 doubleValue]));
+                    quickRes = @(pow([operator1 doubleValue], 1.0/[operator2 doubleValue]));
                 }
                 else if ([postfixChar isEqualToString: OPEN_PARANTHESES])
                 {

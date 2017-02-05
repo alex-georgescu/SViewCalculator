@@ -360,7 +360,7 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
-// Y-th root of X
+// n-th root of X
 -(void)createRootYButton
 {
     self.uibRootY = [self createCustomButton:self.uibRootY
@@ -411,23 +411,23 @@ shouldChangeCharactersInRange:(NSRange)range
 }
 
 
-// %
--(void)createPercentButton
+// .
+-(void)createDotButton
 {
-    self.uibPercent = [self createCustomButton:self.uibPercent
+    self.uibDot = [self createCustomButton:self.uibDot
                   parentView:self.view
              backgroundColor:[UIColor lightGrayColor]
-                   withTitle:PERCENTAGE
+                   withTitle:DOT
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
    
-    [self.uibPercent addTarget:self
+    [self.uibDot addTarget:self
                      action:@selector(addToInput:)
            forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibPercent
+                                             constraintWithItem:self.uibDot
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uibRootY
@@ -435,7 +435,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibPercent
+                                           constraintWithItem:self.uibDot
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uibClosedParantheses
@@ -443,7 +443,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            multiplier:1.0 constant:0];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibPercent
+                                             constraintWithItem:self.uibDot
                                              attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea
@@ -451,7 +451,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              multiplier:0.25 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibPercent attribute:NSLayoutAttributeHeight
+                                              constraintWithItem:self.uibDot attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
                                               multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
@@ -479,7 +479,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibDiv
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibPercent
+                                             toItem:self.uibDot
                                              attribute:NSLayoutAttributeRight
                                              multiplier:1.0 constant:0];
     
@@ -627,7 +627,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uib9
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uibPercent
+                                           toItem:self.uibDot
                                            attribute: NSLayoutAttributeBottom
                                            multiplier:1.0 constant:0];
     
@@ -1067,12 +1067,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton0
 {
     self.uibZero = [self createCustomButton:self.uibZero
-                  parentView:self.view
-             backgroundColor:[UIColor lightGrayColor]
-                   withTitle:ZERO
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                                  parentView:self.view
+                             backgroundColor:[UIColor lightGrayColor]
+                                   withTitle:ZERO
+                                  titleColor:[UIColor blackColor]
+                                 borderColor:[UIColor grayColor]
+                                 borderWidth:1.0f];
     
     [self.uibZero addTarget:self
                      action:@selector(addToInput:)
@@ -1098,102 +1098,10 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibZero attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
-                                             multiplier:0.25 constant:0];
+                                             multiplier:0.5 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
                                               constraintWithItem:self.uibZero attribute:NSLayoutAttributeHeight
-                                              relatedBy:NSLayoutRelationEqual
-                                              toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
-    
-    [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
-}
-
-
--(void)createDotButton
-{
-    self.uibDot = [self createCustomButton:self.uibDot
-                  parentView:self.view
-             backgroundColor:[UIColor lightGrayColor]
-                   withTitle:DOT
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
-    
-    [self.uibDot addTarget:self
-                     action:@selector(addToInput:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibDot
-                                             attribute:NSLayoutAttributeLeft
-                                             relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibZero
-                                             attribute:NSLayoutAttributeRight
-                                             multiplier:1.0 constant:0];
-    
-    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibDot
-                                           attribute:NSLayoutAttributeTop
-                                           relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uib2
-                                           attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:0];
-    
-    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibDot attribute:NSLayoutAttributeWidth
-                                             relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
-                                             multiplier:0.25 constant:0];
-    
-    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibDot attribute:NSLayoutAttributeHeight
-                                              relatedBy:NSLayoutRelationEqual
-                                              toItem:self.view attribute:NSLayoutAttributeHeight
-                                              multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
-    
-    [self.view addConstraints:@[tfTopConstraint, tfRightConstraint, tfWidthConstraint, tfHeightConstraint]];
-}
-
-
--(void)createSignButton
-{
-    self.uibSign = [self createCustomButton:self.uibSign
-                                parentView:self.view
-                           backgroundColor:[UIColor lightGrayColor]
-                                 withTitle:SIGNS
-                                titleColor:[UIColor blackColor]
-                               borderColor:[UIColor grayColor]
-                               borderWidth:1.0f];
-    
-    [self.uibSign addTarget:self
-                     action:@selector(addToInput:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibSign
-                                             attribute:NSLayoutAttributeLeft
-                                             relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibDot
-                                             attribute:NSLayoutAttributeRight
-                                             multiplier:1.0 constant:0];
-    
-    NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibSign
-                                           attribute:NSLayoutAttributeTop
-                                           relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uib3
-                                           attribute: NSLayoutAttributeBottom
-                                           multiplier:1.0 constant:0];
-    
-    NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibSign attribute:NSLayoutAttributeWidth
-                                             relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
-                                             multiplier:0.25 constant:0];
-    
-    NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibSign attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
                                               multiplier:BUTTON_HEIGHT_MULTIPLIER constant:0];
@@ -1221,7 +1129,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibEquals
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibSign
+                                             toItem:self.uibZero
                                              attribute:NSLayoutAttributeRight
                                              multiplier:1.0 constant:0];
     
@@ -1237,7 +1145,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibEquals attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
-                                             multiplier:0.25 constant:0];
+                                             multiplier:0.5 constant:0];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
                                               constraintWithItem:self.uibEquals attribute:NSLayoutAttributeHeight
@@ -1250,7 +1158,8 @@ shouldChangeCharactersInRange:(NSRange)range
 
 
 
-- (void)viewDidLoad {
+-(void)viewDidLoad
+{
     [super viewDidLoad];
     
     // create and align text area
@@ -1264,7 +1173,7 @@ shouldChangeCharactersInRange:(NSRange)range
     
     [self createPowerYButton];
     [self createRootYButton];
-    [self createPercentButton];
+    [self createDotButton];
     [self createDivisionButton];
     
     [self createButton7];
@@ -1283,8 +1192,6 @@ shouldChangeCharactersInRange:(NSRange)range
     [self createPlusButton];
     
     [self createButton0];
-    [self createDotButton];
-    [self createSignButton];
     [self createEqualsButton];
 }
 
@@ -1310,7 +1217,18 @@ shouldChangeCharactersInRange:(NSRange)range
 
 -(void)addToInput : (UIButton*) sender
 {
-    [self.uilNumbersArea replaceRange:self.uilNumbersArea.selectedTextRange withText:sender.titleLabel.text];
+    if (sender.titleLabel.text == POWER)
+    {
+        [self.uilNumbersArea replaceRange:self.uilNumbersArea.selectedTextRange withText:POWER_CARET];
+    }
+    else if (sender.titleLabel.text == ROOT)
+    {
+        [self.uilNumbersArea replaceRange:self.uilNumbersArea.selectedTextRange withText:ROOT_CARET];
+    }
+    else
+    {
+        [self.uilNumbersArea replaceRange:self.uilNumbersArea.selectedTextRange withText:sender.titleLabel.text];
+    }
 }
 
 
@@ -1323,8 +1241,8 @@ shouldChangeCharactersInRange:(NSRange)range
     //According to Apple's documentation, these characters must be quoted (using \) to be treated as literals:
     //* ? + [ ( ) { } ^ $ | \ . /
     NSMutableArray* infixInputArray = [[NSMutableArray alloc] init];
-    NSString* userInputString = self.uilNumbersArea.text;
-    NSString* regexPattern = @"(?<=[+-÷x])(\\d+(?:\\.\\d+)?)|(\\d+(?:\\.\\d+)?)(?=[+-÷x])";
+    NSString* userInputString       = self.uilNumbersArea.text;
+    NSString* regexPattern          = @"(?<=[+-÷x\\^√])(\\d+(?:\\.\\d+)?)|(\\d+(?:\\.\\d+)?)(?=[+-÷x\\^√])";
     
     NSArray* regexMatches = [userInputString componentsSeparatedByRegex:regexPattern];
     for (NSString* matched in regexMatches)

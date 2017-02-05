@@ -19,19 +19,20 @@ extern NSString* const EIGHT;
 extern NSString* const NINE;
 extern NSString* const ZERO;
 extern NSString* const DOT;
-extern NSString* const SIGNS;
 extern NSString* const EQUALITY;
 extern NSString* const ADDITION;
 extern NSString* const SUBTRACTION;
 extern NSString* const MULTIPLICATION;
 extern NSString* const DIVISION;
-extern NSString* const PERCENTAGE;
 extern NSString* const RESET;
 extern NSString* const DELETE;
 extern NSString* const OPEN_PARANTHESES;
 extern NSString* const CLOSED_PARANTHESES;
 extern NSString* const POWER;
+extern NSString* const POWER_CARET;
 extern NSString* const ROOT;
+extern NSString* const ROOT_CARET;
+
 
 extern double const BUTTON_HEIGHT_MULTIPLIER;
 
@@ -43,8 +44,7 @@ typedef enum
     ADD = 1,
     SUBSTRACT = 2,
     MULTIPLY = 3,
-    DIVIDE = 4,
-    PERCENT_OFF = 5
+    DIVIDE = 4
     
 } OPERATION;
 

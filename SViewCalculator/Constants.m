@@ -23,19 +23,19 @@ NSString* const EIGHT = @"8";
 NSString* const NINE = @"9";
 NSString* const ZERO = @"0";
 NSString* const DOT = @".";
-NSString* const SIGNS = @"+/-";
 NSString* const EQUALITY = @"=";
 NSString* const ADDITION = @"+";
 NSString* const SUBTRACTION = @"-";
 NSString* const MULTIPLICATION = @"x";
 NSString* const DIVISION = @"÷";
-NSString* const PERCENTAGE = @"%";
 NSString* const RESET = @"C";
 NSString* const DELETE = @"⌫";
 NSString* const OPEN_PARANTHESES = @"(";
 NSString* const CLOSED_PARANTHESES = @")";
-NSString* const POWER = @"x^y";
+NSString* const POWER = @"x^n";
+NSString* const POWER_CARET = @"^";
 NSString* const ROOT = @"n√x";
+NSString* const ROOT_CARET = @"√";
 
 
 double const BUTTON_HEIGHT_MULTIPLIER = 0.12;

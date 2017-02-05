@@ -17,7 +17,6 @@
 @property (strong, nonatomic) UIButton *uibRootY;
 @property (strong, nonatomic) UIButton *uibDelete;
 @property (strong, nonatomic) UIButton *uibReset;
-@property (strong, nonatomic) UIButton *uibPercent;
 @property (strong, nonatomic) UIButton *uibDiv;
 @property (strong, nonatomic) UIButton *uib7;
 @property (strong, nonatomic) UIButton *uib8;
@@ -33,7 +32,6 @@
 @property (strong, nonatomic) UIButton *uibPlus;
 @property (strong, nonatomic) UIButton *uibZero;
 @property (strong, nonatomic) UIButton *uibDot;
-@property (strong, nonatomic) UIButton *uibSign;
 @property (strong, nonatomic) UIButton *uibEquals;
 
 @end
