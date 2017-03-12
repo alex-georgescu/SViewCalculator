@@ -17,6 +17,6 @@
 -(void) initMetadata;
 -(NSMutableArray*) infixToPostfix :(NSMutableArray*) infixExpression;
 -(NSString*) evaluatePostfix :(NSMutableArray*) postfixExp;
-
+-(NSString*) solveEquation :(NSString*) inputString;
 
 @end

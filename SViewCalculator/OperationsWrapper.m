@@ -9,6 +9,7 @@
 #include <math.h>
 #import "OperationsWrapper.h"
 #import "Constants.h"
+#import "RegexKitLite.h"
 
 @implementation OperationsWrapper
 
@@ -31,7 +32,6 @@
      4. while STACK is not empty, pop and add to POSTFIX
      5. return POSTFIX
     */
-    
     
     NSMutableArray* postfix = [[NSMutableArray alloc] init];
     NSMutableArray* stack = [[NSMutableArray alloc] init];
@@ -136,11 +136,11 @@
                 }
                 else if ([postfixChar isEqualToString: OPEN_PARANTHESES])
                 {
-                
+                    // prepare stack for future recursive processing
                 }
                 else if ([postfixChar isEqualToString: CLOSED_PARANTHESES])
                 {
-                
+                    // start processing
                 }
                 
                 NSString* newOperand = [quickRes stringValue];
@@ -165,6 +165,56 @@
     [stack removeAllObjects];
     
     return result;
+}
+
+
+
+-(NSString*) solveEquation :(NSString*) inputString
+{
+    //According to Apple's documentation, these characters must be quoted (using \) to be treated as literals:
+    //* ? + [ ( ) { } ^ $ | \ . /
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: @"\\(.*\\)" options:0 error:nil];
+    NSArray* matches = [regex matchesInString:inputString options:0 range: NSMakeRange(0, [inputString length])];
+    
+    if (matches.count == 1)
+    {
+        NSTextCheckingResult* match = matches[0];
+        NSString* matchedText = [inputString substringWithRange:[match range]];
+        NSLog(@"match: %@", matchedText);
+        
+        NSString* partialResult = [self solveEquation:[matchedText substringWithRange:NSMakeRange(1, matchedText.length-2)]];
+        inputString = [inputString stringByReplacingOccurrencesOfString:matchedText withString:partialResult];
+    }
+    
+    NSMutableArray* infixInputArray = [[NSMutableArray alloc] init];
+    
+    //Parse user input and split it into OPERANDS and OPERATORS
+    //According to Apple's documentation, these characters must be quoted (using \) to be treated as literals:
+    //* ? + [ ( ) { } ^ $ | \ . /
+    NSArray* regexMatches = [inputString componentsSeparatedByRegex:@"(?<=[+-÷x\\^√])(\\d+(?:\\.\\d+)?)|(\\d+(?:\\.\\d+)?)(?=[+-÷x\\^√])"];
+    for (NSString* matched in regexMatches)
+    {
+        //validate operator (ex: it only has 1 decimal point)
+        if ([matched componentsSeparatedByString:@"."].count > 2)
+        {
+            //TODO:
+            NSLog(@"Oops! Operand %@ has more than 1 decimal point.", matched);
+            return nil;
+        }
+        
+        if (matched.length > 0)
+        {
+            [infixInputArray addObject:matched];
+        }
+    }
+    
+    NSMutableArray* evaluatedInputArray = [self infixToPostfix: infixInputArray];
+    NSLog(@"postfix: %@", evaluatedInputArray);
+    
+    NSString* evaluatedPostfix = [self evaluatePostfix: evaluatedInputArray];
+    NSLog(@"result: %@", evaluatedPostfix);
+    
+    return evaluatedPostfix;
 }
 
 
