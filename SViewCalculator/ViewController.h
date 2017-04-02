@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) UITextField *uilNumbersArea;
+@property (strong, nonatomic) UITextView *uilNumbersArea;
 @property (strong, nonatomic) UIButton *uibOpenParantheses;
 @property (strong, nonatomic) UIButton *uibClosedParantheses;
 @property (strong, nonatomic) UIButton *uibPowerY;

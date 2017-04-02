@@ -1,12 +1,15 @@
 PODS:
+  - Canvas (0.1.2)
   - RegexKitLite (4.0)
 
 DEPENDENCIES:
+  - Canvas
   - RegexKitLite (= 4.0)
 
 SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
 
-PODFILE CHECKSUM: 9b331dc708e3feb98038113abef77a57d128defd
+PODFILE CHECKSUM: 412950df3b106435cc69a44845c715ac8cbe66ff
 
 COCOAPODS: 1.2.0

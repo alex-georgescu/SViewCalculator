@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17B148511D6A56E200CC9741 /* OperationsWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B148501D6A56E200CC9741 /* OperationsWrapper.m */; };
+		17BD22EA1E906973001F7600 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BD22E61E906973001F7600 /* background2.jpg */; };
+		17BD22EB1E906973001F7600 /* background3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BD22E71E906973001F7600 /* background3.jpg */; };
+		17BD22EC1E906973001F7600 /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BD22E81E906973001F7600 /* background4.jpg */; };
 		17D96A641C3988FF000738EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A631C3988FF000738EB /* main.m */; };
 		17D96A671C3988FF000738EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A661C3988FF000738EB /* AppDelegate.m */; };
 		17D96A6A1C3988FF000738EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D96A691C3988FF000738EB /* ViewController.m */; };
@@ -43,6 +46,9 @@
 		17076C321C3B346000CB88BD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		17B148501D6A56E200CC9741 /* OperationsWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationsWrapper.m; sourceTree = "<group>"; };
 		17B148521D6A570000CC9741 /* OperationsWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationsWrapper.h; sourceTree = "<group>"; };
+		17BD22E61E906973001F7600 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background2.jpg; path = Assets.xcassets/background2.jpg; sourceTree = "<group>"; };
+		17BD22E71E906973001F7600 /* background3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background3.jpg; path = Assets.xcassets/background3.jpg; sourceTree = "<group>"; };
+		17BD22E81E906973001F7600 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background4.jpg; path = Assets.xcassets/background4.jpg; sourceTree = "<group>"; };
 		17D96A5F1C3988FF000738EB /* SViewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SViewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D96A631C3988FF000738EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17D96A651C3988FF000738EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		17D96A611C3988FF000738EB /* SViewCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				17F6313C1E7626B500B8C766 /* Assets */,
 				17D96A651C3988FF000738EB /* AppDelegate.h */,
 				17D96A661C3988FF000738EB /* AppDelegate.m */,
 				17D96A681C3988FF000738EB /* ViewController.h */,
@@ -166,6 +173,16 @@
 				17D96A891C3988FF000738EB /* Info.plist */,
 			);
 			path = SViewCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		17F6313C1E7626B500B8C766 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				17BD22E61E906973001F7600 /* background2.jpg */,
+				17BD22E71E906973001F7600 /* background3.jpg */,
+				17BD22E81E906973001F7600 /* background4.jpg */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		1806D4C3E4A2A81F7D51AC0C /* Frameworks */ = {
@@ -307,6 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17D96A721C3988FF000738EB /* LaunchScreen.storyboard in Resources */,
+				17BD22EB1E906973001F7600 /* background3.jpg in Resources */,
+				17BD22EC1E906973001F7600 /* background4.jpg in Resources */,
+				17BD22EA1E906973001F7600 /* background2.jpg in Resources */,
 				17D96A6F1C3988FF000738EB /* Assets.xcassets in Resources */,
 				17D96A6D1C3988FF000738EB /* Main.storyboard in Resources */,
 			);

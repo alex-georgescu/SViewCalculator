@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Canvas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SViewCalculator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>026B55B3B3F7D4F7E1139AB5C02C7B24</key>
+		<key>0625543E56DFBCA774F941A59CFD2B7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0625543E56DFBCA774F941A59CFD2B7E</key>
+		<key>27C4C6B4A2137012821F712127AEDE85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B53F8746F5FA6A18919E16571E7A590</key>
+		<key>F6497E6E7D485D7D0D7E0CD8E84BFCD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA158CCDAFDC4EA5949CD1CC037E96B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

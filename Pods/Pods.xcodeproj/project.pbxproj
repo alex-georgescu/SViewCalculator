@@ -7,85 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040D874AEAEC4E0A91B1C75952D01EC5 /* Canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FC70A99C10A4A524CBBBC2E579D5C6 /* Canvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EB3D5B0DF8AE97601DF211E73B4331 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		1842093255C07AF5F68D438CC7BFBFA4 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6817C501FC5AB28AE43879216473E3E2 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DD7213BAF6205B2E72800AF0357603D /* CSAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B5A37DBEB69F228C5D2037A755FD87F /* CSAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F4C755E9A4145247A227C18AF55A252 /* Pods-SViewCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CF7F14819856D0826DEC1B6F7EA738 /* Pods-SViewCalculator-dummy.m */; };
+		146630EFBC4D2231A50CB9F11A337EC6 /* UINavigationBar+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C7E544042B8FFAFA82796A13CA4A32 /* UINavigationBar+TCCustomFont.m */; };
+		1ED8CB9123077805739DDD87286C23BF /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E5437A0B2494CE640A874FE810354A45 /* UITextField+PlaceholderColor.m */; };
 		279BE7A1FFACD3AD755D229438C0D2BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		367DF084B0E88847D343D5D69E630CE6 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4888932A64624AA2DCF3C4C1C485B987 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3A5D78EF2A1342D0396C1C4AF0451491 /* CSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B59A80DE3E1B4626FDD6708696049 /* CSAnimationView.m */; };
+		3A5FCCCB61472AD8DFFA13B906E5CB17 /* UITextView+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BEFCACBB8DED10AABDE9141FCE34A /* UITextView+TCCustomFont.m */; };
 		3AD236554617D7CF80614B7BDE46170E /* Pods-SViewCalculatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBBBBF18BEF90ACC43CAD17996C3406 /* Pods-SViewCalculatorTests-dummy.m */; };
 		44B9E21764B06A7DD0C592112DD130E3 /* Pods-SViewCalculatorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C09090152CC47C9AA3699EC991B346 /* Pods-SViewCalculatorUITests-dummy.m */; };
-		5B53FD434BBD076E56A48BE31260B84F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		67B96267514D379BE721C248BDA848A1 /* RegexKitLite-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A060334ADAFE7F04B6F9B22DCB54CA9D /* RegexKitLite-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70802ADC67897FFFC1DD2160243FC28E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		71B4605570593F7F3908A388FD93238C /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62BDF9ACF685F4701DA1A42CC34E22 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C30B53574DD00ABD581706CE424E099 /* RegexKitLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB60EA76F30110E2D7D248DBCECA179 /* RegexKitLite-dummy.m */; };
+		4C778137BBA41922618A1EA457F691D1 /* CSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F06D71B02A507490E13A9696FF5297 /* CSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54B06073BC396D015044362E5C58166F /* UITextField+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F4750C14B3A034CF28258FDBB08960 /* UITextField+TCCustomFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CC3111F76F6E705205BB03C7ED4E248 /* UIButton+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BFD77F5C964931C7C2190B48AC798B /* UIButton+TCCustomFont.m */; };
+		6549C61A563E8A6EA19294978B65CDE4 /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BE8C5823619780BF23B54CEF9F9173 /* CSNavigationController.m */; };
+		6A56CDFF7412774FA9927FB805FC007F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		722043CDFAD463446C6662F706DFB995 /* UITextField+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8953BD53D857ADF0E7430A7AE323F9 /* UITextField+TCCustomFont.m */; };
+		7C2D88FA06B8519F7E0EA790B65FA0A7 /* Pods-SViewCalculator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8042571A702B8E4FD9F35651DFBD5ED /* Pods-SViewCalculator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DF330F88E40697709CA0D9C5124DE01 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 431AD18A03F090027FB82E521492A63A /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85B4F9A188654C193576689E1F67435F /* RegexKitLite-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AF4407F5F047BB45AF0E4B08AC7CCE /* RegexKitLite-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86D3745C0F42299E454254484BF5E785 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8B55FAD24769F2878E08440976CE7E58 /* RegexKitLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C8014D6650232024E760FA46682A34 /* RegexKitLite-dummy.m */; };
 		970507DCBF5AA2693A5F5587C64695F7 /* Pods-SViewCalculatorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 378CFF42A2C779D06FF15AE46810FCF7 /* Pods-SViewCalculatorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B71DFAAE720A60139573D0C9CCDE050 /* Pods-SViewCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CF7F14819856D0826DEC1B6F7EA738 /* Pods-SViewCalculator-dummy.m */; };
+		9C5C1641E652073320C3AF57420D76D2 /* UILabel+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A95D43310E6B61DEBB7B4D0F3595200 /* UILabel+TCCustomFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2D3C435370C60A1018320FE3ADEEBB6 /* Canvas-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BA2E4F10CE91D03A05D4C2C87CBE89 /* Canvas-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B39819FF29E15C9E4636B09B4627D46C /* CSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA7AC1060F914EE93BBDD299855F82 /* CSBlurView.m */; };
+		B6358E1AED1AD2949B366E7EBE95E139 /* Canvas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A898E44A633ABE20A9AA42EE24D76373 /* Canvas-dummy.m */; };
+		B8177C9C855257D6F67D3FD2FA4CBB6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B97E4D9EF786C37745533D53E461EEFE /* CSNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1926BDA3499E28FB6535834B7DD74EEE /* CSNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEA3281085FA13AF921E88B84ED5D3F8 /* UILabel+TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB3F89AAD643B3256733FF19464DC33 /* UILabel+TCCustomFont.m */; };
+		CF3FEFAD0F17B31334D7890ECD2B8DFE /* UITextField+PlaceholderColor.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFD178986B094A67405F2BE78F710FF /* UITextField+PlaceholderColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5B84B208FBA94896DCB2F353F10E105 /* UITextView+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1848AD80EF25096158DC2E394BD673 /* UITextView+TCCustomFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A033E57E90F3646D39E7BC566F2067 /* CSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A50406DF81CD3E702F15B866AFABFBEB /* CSAnimation.m */; };
+		DCCCA02E94D84C1C07F9F17D90C3EFD8 /* UINavigationBar+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3FB5838E826BB30255D1112ABD14ED /* UINavigationBar+TCCustomFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E088F64BC2C60DCB23A5C84889A66442 /* UIButton+TCCustomFont.h in Headers */ = {isa = PBXBuildFile; fileRef = F50BDC383875C3424D47508C5EB73555 /* UIButton+TCCustomFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5007A0FFA565BF78E74889AD99FCFC9 /* Pods-SViewCalculatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F9818D754F0018F2F1A352E5222B09 /* Pods-SViewCalculatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA5784513EE99956507FBEB06A34FC6B /* Pods-SViewCalculator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8042571A702B8E4FD9F35651DFBD5ED /* Pods-SViewCalculator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7251150A6F3BC6662A1548688226AB3 /* CSAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3110121C2A078983C78D266DFD271737 /* CSAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CB488A897687B5BBB67E88A2FD7B7180 /* PBXContainerItemProxy */ = {
+		51E980E8BE755423A0616DF03427E679 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 026B55B3B3F7D4F7E1139AB5C02C7B24;
+			remoteGlobalIDString = F6497E6E7D485D7D0D7E0CD8E84BFCD4;
+			remoteInfo = Canvas;
+		};
+		F8ACC0C62F0C6551291E516697910383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA158CCDAFDC4EA5949CD1CC037E96B4;
 			remoteInfo = RegexKitLite;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02F6E3415C8F2F50813E477A6D3A2C8E /* Pods-SViewCalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SViewCalculatorUITests.modulemap"; sourceTree = "<group>"; };
+		08284E93E6B0E71367725F100F200CB9 /* RegexKitLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RegexKitLite.framework; path = RegexKitLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DB3F89AAD643B3256733FF19464DC33 /* UILabel+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+TCCustomFont.m"; path = "CanvasLibrary/UILabel+TCCustomFont.m"; sourceTree = "<group>"; };
 		1103340212580F52FBF5D19EC4A6795B /* Pods-SViewCalculator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SViewCalculator-acknowledgements.markdown"; sourceTree = "<group>"; };
+		12BA2E4F10CE91D03A05D4C2C87CBE89 /* Canvas-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Canvas-umbrella.h"; sourceTree = "<group>"; };
 		12FB9DB65C5D7B2770118A3A5DE7FBE8 /* Pods-SViewCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		159EF3A4F16AC62838C649AD77C538AA /* Pods-SViewCalculatorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculatorTests-frameworks.sh"; sourceTree = "<group>"; };
-		19CB33E5BF0C9E0C1BC698AF5EAD33C0 /* RegexKitLite.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RegexKitLite.modulemap; sourceTree = "<group>"; };
-		27D7A5364D88FC8B0B93098CEBEA33A9 /* RegexKitLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RegexKitLite.framework; path = RegexKitLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1926BDA3499E28FB6535834B7DD74EEE /* CSNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSNavigationController.h; path = CanvasLibrary/CSNavigationController.h; sourceTree = "<group>"; };
+		1F7314A614206DE7002D4D375BB9E637 /* Pods_SViewCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculatorTests.framework; path = "Pods-SViewCalculatorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AF4407F5F047BB45AF0E4B08AC7CCE /* RegexKitLite-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RegexKitLite-umbrella.h"; sourceTree = "<group>"; };
 		288C33E28098EEA2AF009DC332C89D2C /* Pods-SViewCalculatorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SViewCalculatorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		29E3D7C398D39F23C4EE7C1B49DDD9FE /* Canvas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Canvas.framework; path = Canvas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCB6EB24A529403F91001F0C6FBFA06 /* Pods-SViewCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CBBBBF18BEF90ACC43CAD17996C3406 /* Pods-SViewCalculatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SViewCalculatorTests-dummy.m"; sourceTree = "<group>"; };
+		30C8014D6650232024E760FA46682A34 /* RegexKitLite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RegexKitLite-dummy.m"; sourceTree = "<group>"; };
+		3110121C2A078983C78D266DFD271737 /* CSAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimationView.h; path = CanvasLibrary/CSAnimationView.h; sourceTree = "<group>"; };
 		311CF361BC4971B978602025FE9C63D5 /* Pods-SViewCalculatorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculatorUITests-frameworks.sh"; sourceTree = "<group>"; };
 		321C54CF32ED1F9E87C60957D5D32B42 /* Pods-SViewCalculatorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculatorTests-resources.sh"; sourceTree = "<group>"; };
 		378CFF42A2C779D06FF15AE46810FCF7 /* Pods-SViewCalculatorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SViewCalculatorUITests-umbrella.h"; sourceTree = "<group>"; };
+		3C3FB5838E826BB30255D1112ABD14ED /* UINavigationBar+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TCCustomFont.h"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.h"; sourceTree = "<group>"; };
+		3C8BEFCACBB8DED10AABDE9141FCE34A /* UITextView+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+TCCustomFont.m"; path = "CanvasLibrary/UITextView+TCCustomFont.m"; sourceTree = "<group>"; };
 		422EA6A16836E0C61801B128ABE70696 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		431AD18A03F090027FB82E521492A63A /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		4888932A64624AA2DCF3C4C1C485B987 /* RegexKitLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		4FAB9AC4DD65A3B4C1EE90063E47DDB9 /* Pods-SViewCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		52DD496A9605CD64B1F6CD7DA05351A2 /* Pods-SViewCalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SViewCalculatorTests.modulemap"; sourceTree = "<group>"; };
 		54C09090152CC47C9AA3699EC991B346 /* Pods-SViewCalculatorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SViewCalculatorUITests-dummy.m"; sourceTree = "<group>"; };
-		5B62BDF9ACF685F4701DA1A42CC34E22 /* RegexKitLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		5A1848AD80EF25096158DC2E394BD673 /* UITextView+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+TCCustomFont.h"; path = "CanvasLibrary/UITextView+TCCustomFont.h"; sourceTree = "<group>"; };
+		5A95D43310E6B61DEBB7B4D0F3595200 /* UILabel+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+TCCustomFont.h"; path = "CanvasLibrary/UILabel+TCCustomFont.h"; sourceTree = "<group>"; };
+		5ACE138E828F09C98703EC733E5F3729 /* RegexKitLite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RegexKitLite-prefix.pch"; sourceTree = "<group>"; };
 		64BAB1E93CAA88429A89C1C6FF9DC81D /* Pods-SViewCalculatorUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculatorUITests-resources.sh"; sourceTree = "<group>"; };
-		6817C501FC5AB28AE43879216473E3E2 /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		6B5A37DBEB69F228C5D2037A755FD87F /* CSAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSAnimation.h; path = CanvasLibrary/CSAnimation.h; sourceTree = "<group>"; };
 		6FD807DE983A7819B2F61FFCED33EDC9 /* Pods-SViewCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		75C7E544042B8FFAFA82796A13CA4A32 /* UINavigationBar+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TCCustomFont.m"; path = "CanvasLibrary/UINavigationBar+TCCustomFont.m"; sourceTree = "<group>"; };
+		79A25C1DB15F0B9194573843B2659721 /* RegexKitLite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RegexKitLite.xcconfig; sourceTree = "<group>"; };
 		81F1C932A671A24751BC755D7FB4DCC1 /* Pods-SViewCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		86C42A0CE34845CEB0C51EE33E6A7DDD /* Canvas-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Canvas-prefix.pch"; sourceTree = "<group>"; };
 		8C0AEAC8300F0CF69BF95A3DA2CA25F3 /* Pods-SViewCalculator-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculator-resources.sh"; sourceTree = "<group>"; };
+		8DDA7AC1060F914EE93BBDD299855F82 /* CSBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSBlurView.m; path = CanvasLibrary/CSBlurView.m; sourceTree = "<group>"; };
 		8EBCEC6019AFF7B78718EBA5093B55E7 /* Pods-SViewCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SViewCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		933B59A80DE3E1B4626FDD6708696049 /* CSAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimationView.m; path = CanvasLibrary/CSAnimationView.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F61F269666835CBEB3DFA1F20FC968F /* RegexKitLite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RegexKitLite-prefix.pch"; sourceTree = "<group>"; };
-		A060334ADAFE7F04B6F9B22DCB54CA9D /* RegexKitLite-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RegexKitLite-umbrella.h"; sourceTree = "<group>"; };
+		95F4750C14B3A034CF28258FDBB08960 /* UITextField+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+TCCustomFont.h"; path = "CanvasLibrary/UITextField+TCCustomFont.h"; sourceTree = "<group>"; };
+		96F06D71B02A507490E13A9696FF5297 /* CSBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSBlurView.h; path = CanvasLibrary/CSBlurView.h; sourceTree = "<group>"; };
+		A14B60ED8A33D6B163431D94A539C6F0 /* Pods_SViewCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculatorUITests.framework; path = "Pods-SViewCalculatorUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F9818D754F0018F2F1A352E5222B09 /* Pods-SViewCalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SViewCalculatorTests-umbrella.h"; sourceTree = "<group>"; };
-		ACB60EA76F30110E2D7D248DBCECA179 /* RegexKitLite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RegexKitLite-dummy.m"; sourceTree = "<group>"; };
+		A1FC70A99C10A4A524CBBBC2E579D5C6 /* Canvas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Canvas.h; path = CanvasLibrary/Canvas.h; sourceTree = "<group>"; };
+		A50406DF81CD3E702F15B866AFABFBEB /* CSAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSAnimation.m; path = CanvasLibrary/CSAnimation.m; sourceTree = "<group>"; };
+		A898E44A633ABE20A9AA42EE24D76373 /* Canvas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Canvas-dummy.m"; sourceTree = "<group>"; };
+		ADFD178986B094A67405F2BE78F710FF /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+PlaceholderColor.h"; path = "CanvasLibrary/UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
+		B2BE8C5823619780BF23B54CEF9F9173 /* CSNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSNavigationController.m; path = CanvasLibrary/CSNavigationController.m; sourceTree = "<group>"; };
 		B3CF7F14819856D0826DEC1B6F7EA738 /* Pods-SViewCalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SViewCalculator-dummy.m"; sourceTree = "<group>"; };
-		B6AE342E61F9E4C1BDE8E004BF7D6ECF /* Pods_SViewCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculatorUITests.framework; path = "Pods-SViewCalculatorUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EC4FEB80F910B2AA87D7B72C1E9A8F /* RegexKitLite.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RegexKitLite.modulemap; sourceTree = "<group>"; };
+		B99A51CED25BA71D3F2F5ECF7070F9E4 /* Canvas.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Canvas.modulemap; sourceTree = "<group>"; };
+		BD8953BD53D857ADF0E7430A7AE323F9 /* UITextField+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TCCustomFont.m"; path = "CanvasLibrary/UITextField+TCCustomFont.m"; sourceTree = "<group>"; };
+		BF031D1CD6EA84E9D6CC3B48CE139E20 /* Canvas.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Canvas.xcconfig; sourceTree = "<group>"; };
 		C04300F13C83C34DB5F3C94DA1C11EAC /* Pods-SViewCalculatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SViewCalculatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C2E118FB099A76F09686A17173973324 /* Pods_SViewCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculatorTests.framework; path = "Pods-SViewCalculatorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3D394991646B0EC5EACD31662C92E9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9EC8392CB18D1EAF147F545D361601 /* Pods-SViewCalculator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SViewCalculator-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBD2A2F50051F9DA8C0F5B404E087EDB /* Pods_SViewCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculator.framework; path = "Pods-SViewCalculator.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BFD77F5C964931C7C2190B48AC798B /* UIButton+TCCustomFont.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+TCCustomFont.m"; path = "CanvasLibrary/UIButton+TCCustomFont.m"; sourceTree = "<group>"; };
 		D0E33D01583C6ED9325234E192CC1E04 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D27BFEB84F8F8FC67ABA66F64C471A1D /* Pods-SViewCalculatorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SViewCalculatorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D7CE7A4584A041D49D4A66BDD72635D5 /* Pods-SViewCalculator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SViewCalculator-frameworks.sh"; sourceTree = "<group>"; };
-		D9F55854B99A31D48F1D77FCCFF5BB9A /* Pods_SViewCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SViewCalculator.framework; path = "Pods-SViewCalculator.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5EE6D54E725E4D25FDBE51774824EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0D68D2D1FE11775892FC982C9DA9404 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3892A18C07252B240788DC9C143BCD6 /* RegexKitLite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RegexKitLite.xcconfig; sourceTree = "<group>"; };
+		E5437A0B2494CE640A874FE810354A45 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+PlaceholderColor.m"; path = "CanvasLibrary/UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
 		E5C920310C1F38C91EEFA0F64836C3A7 /* Pods-SViewCalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SViewCalculator.modulemap"; sourceTree = "<group>"; };
 		E8042571A702B8E4FD9F35651DFBD5ED /* Pods-SViewCalculator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SViewCalculator-umbrella.h"; sourceTree = "<group>"; };
 		EA49654C0A0C318B4E17C808C514A846 /* Pods-SViewCalculatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SViewCalculatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F50BDC383875C3424D47508C5EB73555 /* UIButton+TCCustomFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+TCCustomFont.h"; path = "CanvasLibrary/UIButton+TCCustomFont.h"; sourceTree = "<group>"; };
+		FE122F6C155A4C3FC21AE4DD614FBFD4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06A30E23A5E0664C873A2761B2FF7BB1 /* Frameworks */ = {
+		41CEF05CC7ABB1364FB992C9886B3573 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70802ADC67897FFFC1DD2160243FC28E /* Foundation.framework in Frameworks */,
+				6A56CDFF7412774FA9927FB805FC007F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,43 +164,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5FFFF39DBA4E39F4202EDBDC50129D5 /* Frameworks */ = {
+		CD83E02994AB3C902C2233A3AE46BADD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B53FD434BBD076E56A48BE31260B84F /* Foundation.framework in Frameworks */,
+				86D3745C0F42299E454254484BF5E785 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA23D4A06ACE11BF9A43711D4934BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8177C9C855257D6F67D3FD2FA4CBB6C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1ADC155637A28436C2473ACB278D9C58 /* RegexKitLite */ = {
+		002CAE3FCFAE40B0772A750EAB226452 /* RegexKitLite */ = {
 			isa = PBXGroup;
 			children = (
-				6817C501FC5AB28AE43879216473E3E2 /* RegexKitLite.h */,
-				5B62BDF9ACF685F4701DA1A42CC34E22 /* RegexKitLite.m */,
-				54362BCD72DF8FB306D31FA1FDD01DBA /* Support Files */,
+				431AD18A03F090027FB82E521492A63A /* RegexKitLite.h */,
+				4888932A64624AA2DCF3C4C1C485B987 /* RegexKitLite.m */,
+				6512DFC6EEA38F9E993BA8F18AE0A0A2 /* Support Files */,
 			);
 			name = RegexKitLite;
 			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
-		3FDFC1F8CA71B9DA045D0EB03BE03684 /* Products */ = {
+		1C518A25033FD81EDBE09A618297FCC8 /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				D9F55854B99A31D48F1D77FCCFF5BB9A /* Pods_SViewCalculator.framework */,
-				C2E118FB099A76F09686A17173973324 /* Pods_SViewCalculatorTests.framework */,
-				B6AE342E61F9E4C1BDE8E004BF7D6ECF /* Pods_SViewCalculatorUITests.framework */,
-				27D7A5364D88FC8B0B93098CEBEA33A9 /* RegexKitLite.framework */,
+				A1FC70A99C10A4A524CBBBC2E579D5C6 /* Canvas.h */,
+				6B5A37DBEB69F228C5D2037A755FD87F /* CSAnimation.h */,
+				A50406DF81CD3E702F15B866AFABFBEB /* CSAnimation.m */,
+				3110121C2A078983C78D266DFD271737 /* CSAnimationView.h */,
+				933B59A80DE3E1B4626FDD6708696049 /* CSAnimationView.m */,
+				96F06D71B02A507490E13A9696FF5297 /* CSBlurView.h */,
+				8DDA7AC1060F914EE93BBDD299855F82 /* CSBlurView.m */,
+				1926BDA3499E28FB6535834B7DD74EEE /* CSNavigationController.h */,
+				B2BE8C5823619780BF23B54CEF9F9173 /* CSNavigationController.m */,
+				F50BDC383875C3424D47508C5EB73555 /* UIButton+TCCustomFont.h */,
+				D0BFD77F5C964931C7C2190B48AC798B /* UIButton+TCCustomFont.m */,
+				5A95D43310E6B61DEBB7B4D0F3595200 /* UILabel+TCCustomFont.h */,
+				0DB3F89AAD643B3256733FF19464DC33 /* UILabel+TCCustomFont.m */,
+				3C3FB5838E826BB30255D1112ABD14ED /* UINavigationBar+TCCustomFont.h */,
+				75C7E544042B8FFAFA82796A13CA4A32 /* UINavigationBar+TCCustomFont.m */,
+				ADFD178986B094A67405F2BE78F710FF /* UITextField+PlaceholderColor.h */,
+				E5437A0B2494CE640A874FE810354A45 /* UITextField+PlaceholderColor.m */,
+				95F4750C14B3A034CF28258FDBB08960 /* UITextField+TCCustomFont.h */,
+				BD8953BD53D857ADF0E7430A7AE323F9 /* UITextField+TCCustomFont.m */,
+				5A1848AD80EF25096158DC2E394BD673 /* UITextView+TCCustomFont.h */,
+				3C8BEFCACBB8DED10AABDE9141FCE34A /* UITextView+TCCustomFont.m */,
+				CAD121D69806FD800846C2CFE14F6B9D /* Support Files */,
 			);
-			name = Products;
+			name = Canvas;
+			path = Canvas;
 			sourceTree = "<group>";
 		};
-		3FEBAAEA82AA474F6A66A9B5B1FDE884 /* Pods */ = {
+		1D2EBD237F6227FEB2BD61D4F6B74494 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1ADC155637A28436C2473ACB278D9C58 /* RegexKitLite */,
+				1C518A25033FD81EDBE09A618297FCC8 /* Canvas */,
+				002CAE3FCFAE40B0772A750EAB226452 /* RegexKitLite */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -164,15 +251,15 @@
 			path = "Target Support Files/Pods-SViewCalculatorUITests";
 			sourceTree = "<group>";
 		};
-		54362BCD72DF8FB306D31FA1FDD01DBA /* Support Files */ = {
+		6512DFC6EEA38F9E993BA8F18AE0A0A2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C3D394991646B0EC5EACD31662C92E9F /* Info.plist */,
-				19CB33E5BF0C9E0C1BC698AF5EAD33C0 /* RegexKitLite.modulemap */,
-				E3892A18C07252B240788DC9C143BCD6 /* RegexKitLite.xcconfig */,
-				ACB60EA76F30110E2D7D248DBCECA179 /* RegexKitLite-dummy.m */,
-				9F61F269666835CBEB3DFA1F20FC968F /* RegexKitLite-prefix.pch */,
-				A060334ADAFE7F04B6F9B22DCB54CA9D /* RegexKitLite-umbrella.h */,
+				DE5EE6D54E725E4D25FDBE51774824EB /* Info.plist */,
+				B5EC4FEB80F910B2AA87D7B72C1E9A8F /* RegexKitLite.modulemap */,
+				79A25C1DB15F0B9194573843B2659721 /* RegexKitLite.xcconfig */,
+				30C8014D6650232024E760FA46682A34 /* RegexKitLite-dummy.m */,
+				5ACE138E828F09C98703EC733E5F3729 /* RegexKitLite-prefix.pch */,
+				26AF4407F5F047BB45AF0E4B08AC7CCE /* RegexKitLite-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RegexKitLite";
@@ -201,10 +288,22 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3FEBAAEA82AA474F6A66A9B5B1FDE884 /* Pods */,
-				3FDFC1F8CA71B9DA045D0EB03BE03684 /* Products */,
+				1D2EBD237F6227FEB2BD61D4F6B74494 /* Pods */,
+				853C46CB0364F90B60175B40378704C1 /* Products */,
 				7B141CBB11EAE8ECC17C5BCD51EC9417 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		853C46CB0364F90B60175B40378704C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29E3D7C398D39F23C4EE7C1B49DDD9FE /* Canvas.framework */,
+				CBD2A2F50051F9DA8C0F5B404E087EDB /* Pods_SViewCalculator.framework */,
+				1F7314A614206DE7002D4D375BB9E637 /* Pods_SViewCalculatorTests.framework */,
+				A14B60ED8A33D6B163431D94A539C6F0 /* Pods_SViewCalculatorUITests.framework */,
+				08284E93E6B0E71367725F100F200CB9 /* RegexKitLite.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		91BF1A5E8341C9706AD23FE1EE777813 /* Pods-SViewCalculatorTests */ = {
@@ -251,6 +350,20 @@
 			path = "Target Support Files/Pods-SViewCalculator";
 			sourceTree = "<group>";
 		};
+		CAD121D69806FD800846C2CFE14F6B9D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B99A51CED25BA71D3F2F5ECF7070F9E4 /* Canvas.modulemap */,
+				BF031D1CD6EA84E9D6CC3B48CE139E20 /* Canvas.xcconfig */,
+				A898E44A633ABE20A9AA42EE24D76373 /* Canvas-dummy.m */,
+				86C42A0CE34845CEB0C51EE33E6A7DDD /* Canvas-prefix.pch */,
+				12BA2E4F10CE91D03A05D4C2C87CBE89 /* Canvas-umbrella.h */,
+				FE122F6C155A4C3FC21AE4DD614FBFD4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Canvas";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -262,12 +375,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DD95E525BF43DA66C7D6D00A75C0470 /* Headers */ = {
+		300CEC21E61295256DB20DB40BBDF14C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B96267514D379BE721C248BDA848A1 /* RegexKitLite-umbrella.h in Headers */,
-				1842093255C07AF5F68D438CC7BFBFA4 /* RegexKitLite.h in Headers */,
+				7C2D88FA06B8519F7E0EA790B65FA0A7 /* Pods-SViewCalculator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,34 +391,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9632B466E15F6E561A134FF5C512881 /* Headers */ = {
+		840E726B31B30A3EFBD8C5F5839CF291 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5784513EE99956507FBEB06A34FC6B /* Pods-SViewCalculator-umbrella.h in Headers */,
+				B2D3C435370C60A1018320FE3ADEEBB6 /* Canvas-umbrella.h in Headers */,
+				040D874AEAEC4E0A91B1C75952D01EC5 /* Canvas.h in Headers */,
+				0DD7213BAF6205B2E72800AF0357603D /* CSAnimation.h in Headers */,
+				F7251150A6F3BC6662A1548688226AB3 /* CSAnimationView.h in Headers */,
+				4C778137BBA41922618A1EA457F691D1 /* CSBlurView.h in Headers */,
+				B97E4D9EF786C37745533D53E461EEFE /* CSNavigationController.h in Headers */,
+				E088F64BC2C60DCB23A5C84889A66442 /* UIButton+TCCustomFont.h in Headers */,
+				9C5C1641E652073320C3AF57420D76D2 /* UILabel+TCCustomFont.h in Headers */,
+				DCCCA02E94D84C1C07F9F17D90C3EFD8 /* UINavigationBar+TCCustomFont.h in Headers */,
+				CF3FEFAD0F17B31334D7890ECD2B8DFE /* UITextField+PlaceholderColor.h in Headers */,
+				54B06073BC396D015044362E5C58166F /* UITextField+TCCustomFont.h in Headers */,
+				D5B84B208FBA94896DCB2F353F10E105 /* UITextView+TCCustomFont.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB018F38590257C0D256016DA772F621 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B4F9A188654C193576689E1F67435F /* RegexKitLite-umbrella.h in Headers */,
+				7DF330F88E40697709CA0D9C5124DE01 /* RegexKitLite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		026B55B3B3F7D4F7E1139AB5C02C7B24 /* RegexKitLite */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC41B3D2E602DAF001CD5890C592425B /* Build configuration list for PBXNativeTarget "RegexKitLite" */;
-			buildPhases = (
-				C092940341553320D931B02C1E76687D /* Sources */,
-				06A30E23A5E0664C873A2761B2FF7BB1 /* Frameworks */,
-				5DD95E525BF43DA66C7D6D00A75C0470 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RegexKitLite;
-			productName = RegexKitLite;
-			productReference = 27D7A5364D88FC8B0B93098CEBEA33A9 /* RegexKitLite.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		0625543E56DFBCA774F941A59CFD2B7E /* Pods-SViewCalculatorTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF393B8109F248F2E97FFEB7EB300E0C /* Build configuration list for PBXNativeTarget "Pods-SViewCalculatorTests" */;
@@ -321,7 +436,26 @@
 			);
 			name = "Pods-SViewCalculatorTests";
 			productName = "Pods-SViewCalculatorTests";
-			productReference = C2E118FB099A76F09686A17173973324 /* Pods_SViewCalculatorTests.framework */;
+			productReference = 1F7314A614206DE7002D4D375BB9E637 /* Pods_SViewCalculatorTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27C4C6B4A2137012821F712127AEDE85 /* Pods-SViewCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34FCAEC68D0498E5368668977D1E977C /* Build configuration list for PBXNativeTarget "Pods-SViewCalculator" */;
+			buildPhases = (
+				A392545A600E0B68429A2BB32DAAEDF9 /* Sources */,
+				41CEF05CC7ABB1364FB992C9886B3573 /* Frameworks */,
+				300CEC21E61295256DB20DB40BBDF14C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				156CE7A6BDAE4A49C436BFB994B3B133 /* PBXTargetDependency */,
+				5084A6EED6DE4AA37925CF53BB895D3F /* PBXTargetDependency */,
+			);
+			name = "Pods-SViewCalculator";
+			productName = "Pods-SViewCalculator";
+			productReference = CBD2A2F50051F9DA8C0F5B404E087EDB /* Pods_SViewCalculator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		47097173DDFA723312CD78477CFD4F1B /* Pods-SViewCalculatorUITests */ = {
@@ -338,25 +472,41 @@
 			);
 			name = "Pods-SViewCalculatorUITests";
 			productName = "Pods-SViewCalculatorUITests";
-			productReference = B6AE342E61F9E4C1BDE8E004BF7D6ECF /* Pods_SViewCalculatorUITests.framework */;
+			productReference = A14B60ED8A33D6B163431D94A539C6F0 /* Pods_SViewCalculatorUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5B53F8746F5FA6A18919E16571E7A590 /* Pods-SViewCalculator */ = {
+		F6497E6E7D485D7D0D7E0CD8E84BFCD4 /* Canvas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FA442AD3ED40E9D202507A0E6C30017 /* Build configuration list for PBXNativeTarget "Pods-SViewCalculator" */;
+			buildConfigurationList = 596FCB5904178E733A3C78618222D49A /* Build configuration list for PBXNativeTarget "Canvas" */;
 			buildPhases = (
-				EA42DFAD48D064705D69A66ADB14543F /* Sources */,
-				F5FFFF39DBA4E39F4202EDBDC50129D5 /* Frameworks */,
-				A9632B466E15F6E561A134FF5C512881 /* Headers */,
+				B24125255171B4E465A02155C472B6AF /* Sources */,
+				EEA23D4A06ACE11BF9A43711D4934BB5 /* Frameworks */,
+				840E726B31B30A3EFBD8C5F5839CF291 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				572F7446E50A3802C0489C992B12D08B /* PBXTargetDependency */,
 			);
-			name = "Pods-SViewCalculator";
-			productName = "Pods-SViewCalculator";
-			productReference = D9F55854B99A31D48F1D77FCCFF5BB9A /* Pods_SViewCalculator.framework */;
+			name = Canvas;
+			productName = Canvas;
+			productReference = 29E3D7C398D39F23C4EE7C1B49DDD9FE /* Canvas.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA158CCDAFDC4EA5949CD1CC037E96B4 /* RegexKitLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793BEA78F552F151A877636841CAFA6A /* Build configuration list for PBXNativeTarget "RegexKitLite" */;
+			buildPhases = (
+				92C3D97A299F34B422F9689664782BE7 /* Sources */,
+				CD83E02994AB3C902C2233A3AE46BADD /* Frameworks */,
+				DB018F38590257C0D256016DA772F621 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RegexKitLite;
+			productName = RegexKitLite;
+			productReference = 08284E93E6B0E71367725F100F200CB9 /* RegexKitLite.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -376,14 +526,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3FDFC1F8CA71B9DA045D0EB03BE03684 /* Products */;
+			productRefGroup = 853C46CB0364F90B60175B40378704C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B53F8746F5FA6A18919E16571E7A590 /* Pods-SViewCalculator */,
+				F6497E6E7D485D7D0D7E0CD8E84BFCD4 /* Canvas */,
+				27C4C6B4A2137012821F712127AEDE85 /* Pods-SViewCalculator */,
 				0625543E56DFBCA774F941A59CFD2B7E /* Pods-SViewCalculatorTests */,
 				47097173DDFA723312CD78477CFD4F1B /* Pods-SViewCalculatorUITests */,
-				026B55B3B3F7D4F7E1139AB5C02C7B24 /* RegexKitLite */,
+				FA158CCDAFDC4EA5949CD1CC037E96B4 /* RegexKitLite */,
 			);
 		};
 /* End PBXProject section */
@@ -397,12 +548,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C092940341553320D931B02C1E76687D /* Sources */ = {
+		92C3D97A299F34B422F9689664782BE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C30B53574DD00ABD581706CE424E099 /* RegexKitLite-dummy.m in Sources */,
-				71B4605570593F7F3908A388FD93238C /* RegexKitLite.m in Sources */,
+				8B55FAD24769F2878E08440976CE7E58 /* RegexKitLite-dummy.m in Sources */,
+				367DF084B0E88847D343D5D69E630CE6 /* RegexKitLite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A392545A600E0B68429A2BB32DAAEDF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4C755E9A4145247A227C18AF55A252 /* Pods-SViewCalculator-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24125255171B4E465A02155C472B6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6358E1AED1AD2949B366E7EBE95E139 /* Canvas-dummy.m in Sources */,
+				D8A033E57E90F3646D39E7BC566F2067 /* CSAnimation.m in Sources */,
+				3A5D78EF2A1342D0396C1C4AF0451491 /* CSAnimationView.m in Sources */,
+				B39819FF29E15C9E4636B09B4627D46C /* CSBlurView.m in Sources */,
+				6549C61A563E8A6EA19294978B65CDE4 /* CSNavigationController.m in Sources */,
+				5CC3111F76F6E705205BB03C7ED4E248 /* UIButton+TCCustomFont.m in Sources */,
+				BEA3281085FA13AF921E88B84ED5D3F8 /* UILabel+TCCustomFont.m in Sources */,
+				146630EFBC4D2231A50CB9F11A337EC6 /* UINavigationBar+TCCustomFont.m in Sources */,
+				1ED8CB9123077805739DDD87286C23BF /* UITextField+PlaceholderColor.m in Sources */,
+				722043CDFAD463446C6662F706DFB995 /* UITextField+TCCustomFont.m in Sources */,
+				3A5FCCCB61472AD8DFFA13B906E5CB17 /* UITextView+TCCustomFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,22 +591,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA42DFAD48D064705D69A66ADB14543F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B71DFAAE720A60139573D0C9CCDE050 /* Pods-SViewCalculator-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		572F7446E50A3802C0489C992B12D08B /* PBXTargetDependency */ = {
+		156CE7A6BDAE4A49C436BFB994B3B133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Canvas;
+			target = F6497E6E7D485D7D0D7E0CD8E84BFCD4 /* Canvas */;
+			targetProxy = 51E980E8BE755423A0616DF03427E679 /* PBXContainerItemProxy */;
+		};
+		5084A6EED6DE4AA37925CF53BB895D3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RegexKitLite;
-			target = 026B55B3B3F7D4F7E1139AB5C02C7B24 /* RegexKitLite */;
-			targetProxy = CB488A897687B5BBB67E88A2FD7B7180 /* PBXContainerItemProxy */;
+			target = FA158CCDAFDC4EA5949CD1CC037E96B4 /* RegexKitLite */;
+			targetProxy = F8ACC0C62F0C6551291E516697910383 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -469,40 +644,36 @@
 			};
 			name = Release;
 		};
-		29866DF0E6CBF78FE71410AC7C26333A /* Release */ = {
+		288CB9A7C92C94D87B7AF1192B56DFD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EBCEC6019AFF7B78718EBA5093B55E7 /* Pods-SViewCalculator.release.xcconfig */;
+			baseConfigurationReference = BF031D1CD6EA84E9D6CC3B48CE139E20 /* Canvas.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SViewCalculator/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Canvas/Canvas-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Canvas/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SViewCalculator;
+				MODULEMAP_FILE = "Target Support Files/Canvas/Canvas.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Canvas;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		3BA6F331B5932EFE9BE6D7DB224AC42D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -538,6 +709,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		45C23FD624D48B077FD0A6D16DE537D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F1C932A671A24751BC755D7FB4DCC1 /* Pods-SViewCalculator.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SViewCalculator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SViewCalculator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -618,44 +824,9 @@
 			};
 			name = Debug;
 		};
-		942E5E8D29CFC5A9CC0780639D841B2A /* Debug */ = {
+		A8D30DA8E0FD9FF8B13AF1D2385B3EDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81F1C932A671A24751BC755D7FB4DCC1 /* Pods-SViewCalculator.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SViewCalculator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SViewCalculator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B6B8AD46541A91AAFD0EC2543F7A4921 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3892A18C07252B240788DC9C143BCD6 /* RegexKitLite.xcconfig */;
+			baseConfigurationReference = 79A25C1DB15F0B9194573843B2659721 /* RegexKitLite.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -683,6 +854,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		B1A54C3844AEB9B62EB2216EF03B9295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF031D1CD6EA84E9D6CC3B48CE139E20 /* Canvas.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Canvas/Canvas-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Canvas/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Canvas/Canvas.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Canvas;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -759,9 +961,9 @@
 			};
 			name = Debug;
 		};
-		C3A65C9B673BD2D46098083BF428220B /* Release */ = {
+		BC241673EA93130689CEE289F4735D09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3892A18C07252B240788DC9C143BCD6 /* RegexKitLite.xcconfig */;
+			baseConfigurationReference = 79A25C1DB15F0B9194573843B2659721 /* RegexKitLite.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -790,6 +992,41 @@
 			};
 			name = Release;
 		};
+		E078F20899DCE6F98D25D9B41AE3BD19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBCEC6019AFF7B78718EBA5093B55E7 /* Pods-SViewCalculator.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SViewCalculator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SViewCalculator/Pods-SViewCalculator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SViewCalculator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -798,6 +1035,15 @@
 			buildConfigurations = (
 				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
 				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34FCAEC68D0498E5368668977D1E977C /* Build configuration list for PBXNativeTarget "Pods-SViewCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C23FD624D48B077FD0A6D16DE537D1 /* Debug */,
+				E078F20899DCE6F98D25D9B41AE3BD19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -811,11 +1057,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FA442AD3ED40E9D202507A0E6C30017 /* Build configuration list for PBXNativeTarget "Pods-SViewCalculator" */ = {
+		596FCB5904178E733A3C78618222D49A /* Build configuration list for PBXNativeTarget "Canvas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				942E5E8D29CFC5A9CC0780639D841B2A /* Debug */,
-				29866DF0E6CBF78FE71410AC7C26333A /* Release */,
+				288CB9A7C92C94D87B7AF1192B56DFD1 /* Debug */,
+				B1A54C3844AEB9B62EB2216EF03B9295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		793BEA78F552F151A877636841CAFA6A /* Build configuration list for PBXNativeTarget "RegexKitLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D30DA8E0FD9FF8B13AF1D2385B3EDF /* Debug */,
+				BC241673EA93130689CEE289F4735D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -825,15 +1080,6 @@
 			buildConfigurations = (
 				88B63BA7EAAD13BBF87E1191F867CDC6 /* Debug */,
 				3BA6F331B5932EFE9BE6D7DB224AC42D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC41B3D2E602DAF001CD5890C592425B /* Build configuration list for PBXNativeTarget "RegexKitLite" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6B8AD46541A91AAFD0EC2543F7A4921 /* Debug */,
-				C3A65C9B673BD2D46098083BF428220B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -18,5 +18,6 @@ target 'SViewCalculator' do
   end
 
   pod 'RegexKitLite', ‘4.0’
+  pod ‘Canvas’
 
 end
