@@ -14,6 +14,10 @@
 
 @implementation ViewController
 
+
+UIColor* _lightBlueColour;
+
+
 -(UIButton*)createCustomButton :(UIButton*) button
                  parentView:(UIView*) superview
             backgroundColor:(UIColor*) backgroundColor
@@ -274,7 +278,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibDelete = [self createCustomButton:self.uibDelete
                                    parentView:self.view
-                              backgroundColor:[UIColor orangeColor]
+                              backgroundColor:_lightBlueColour
                                     withTitle:DELETE
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
@@ -475,7 +479,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibDiv = [self createCustomButton:self.uibDiv
                   parentView:self.view
-             backgroundColor:[UIColor orangeColor]
+             backgroundColor:_lightBlueColour
                    withTitle:DIVISION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -662,7 +666,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibMultiply = [self createCustomButton:self.uibMultiply
                   parentView:self.view
-             backgroundColor:[UIColor orangeColor]
+             backgroundColor:_lightBlueColour
                    withTitle:MULTIPLICATION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -847,7 +851,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibMinus = [self createCustomButton:self.uibMinus
                   parentView:self.view
-             backgroundColor:[UIColor orangeColor]
+             backgroundColor:_lightBlueColour
                    withTitle:SUBTRACTION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -1032,7 +1036,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibPlus = [self createCustomButton:self.uibPlus
                   parentView:self.view
-             backgroundColor:[UIColor orangeColor]
+             backgroundColor:_lightBlueColour
                    withTitle:ADDITION
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -1125,7 +1129,7 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     self.uibEquals = [self createCustomButton:self.uibEquals
                   parentView:self.view
-             backgroundColor:[UIColor orangeColor]
+             backgroundColor:_lightBlueColour
                    withTitle:EQUALITY
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -1171,6 +1175,9 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+ 
+    _lightBlueColour = [UIColor colorWithRed:181/255.0f green:224/255.0f blue:255/255.0f alpha:1];
+
     
     // create and align text area
     [self createResultTextArea];
