@@ -132,7 +132,17 @@
                 }
                 else if ([postfixChar isEqualToString: ROOT_CARET])
                 {
-                    quickRes = @(pow([operator1 doubleValue], 1.0/[operator2 doubleValue]));
+                    double base = [operator1 doubleValue];
+                    double root = [operator2 doubleValue];
+                    
+                    while(fmod(root, 3.0) > 1.0)
+                    {
+                        root /= 3.0;
+                        
+                        base = cbrt(base);
+                    }
+                    
+                    quickRes = @(pow(base, 1.0 / root));
                 }
                 else if ([postfixChar isEqualToString: OPEN_PARANTHESES])
                 {
