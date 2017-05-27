@@ -1222,12 +1222,35 @@ shouldChangeCharactersInRange:(NSRange)range
 {
     if (self.uilNumbersArea.text.length > 1)
     {
-        self.uilNumbersArea.text = [self.uilNumbersArea.text substringToIndex:self.uilNumbersArea.text.length - 1];
+        UITextRange *myRange = self.uilNumbersArea.selectedTextRange;
+        UITextPosition *myPosition = myRange.start;
+        NSInteger idx = [self.uilNumbersArea offsetFromPosition:self.uilNumbersArea.beginningOfDocument toPosition:myPosition];
+        
+        NSMutableString *newString = [self.uilNumbersArea.text mutableCopy];
+        
+        // Delete character before index location
+        [newString deleteCharactersInRange:NSMakeRange(--idx, 1)];
+        
+        // Write the string back to the UITextField
+        self.uilNumbersArea.text = newString;
+        
+        [self selectTextForInput:self.uilNumbersArea atRange:NSMakeRange(idx, 0)];
     }
     else
     {
         [self resetInput];
     }
+}
+
+
+-(void)selectTextForInput:(UITextView *)input
+                  atRange:(NSRange)range
+{
+    UITextPosition *start = [input positionFromPosition:[input beginningOfDocument]
+                                                 offset:range.location];
+    UITextPosition *end = [input positionFromPosition:start
+                                               offset:range.length];
+    [input setSelectedTextRange:[input textRangeFromPosition:start toPosition:end]];
 }
 
 
