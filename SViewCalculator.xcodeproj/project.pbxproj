@@ -126,13 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				17D96A651C3988FF000738EB /* AppDelegate.h */,
-				17D96A661C3988FF000738EB /* AppDelegate.m */,
 				17D96A681C3988FF000738EB /* ViewController.h */,
+				17D96A661C3988FF000738EB /* AppDelegate.m */,
 				17D96A691C3988FF000738EB /* ViewController.m */,
-				17D96A6B1C3988FF000738EB /* Main.storyboard */,
+				17D96A731C3988FF000738EB /* Info.plist */,
 				17D96A6E1C3988FF000738EB /* Assets.xcassets */,
 				17D96A701C3988FF000738EB /* LaunchScreen.storyboard */,
-				17D96A731C3988FF000738EB /* Info.plist */,
+				17D96A6B1C3988FF000738EB /* Main.storyboard */,
 				17D96A621C3988FF000738EB /* Supporting Files */,
 			);
 			path = SViewCalculator;

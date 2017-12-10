@@ -20,7 +20,7 @@ UIColor* _lightBlueColour;
 -(UIButton*)createCustomButton :(UIButton*) button
                  parentView:(UIView*) superview
             backgroundColor:(UIColor*) backgroundColor
-                  withTitle:(NSString*) title
+                  withTitleImage:(UIImage*) titleImage
                  titleColor:(UIColor*) titleColor
                 borderColor:(UIColor*) borderColor
                 borderWidth:(double) borderWidth
@@ -34,7 +34,12 @@ UIColor* _lightBlueColour;
     button.layer.borderWidth = 1;
     button.layer.borderColor = [[UIColor blackColor] CGColor];
     
-    [button setTitle:title forState:UIControlStateNormal];
+    [button setImage:titleImage forState:UIControlStateNormal];
+    button.imageView.contentMode = UIViewContentModeScaleAspectFit; //preserve aspect ratio
+    button.imageView.userInteractionEnabled = false; //preserve aspect ratio
+    button.tintColor = titleColor;
+    button.imageEdgeInsets = UIEdgeInsetsMake(20,20,20,20);
+
     [button setTitleColor:titleColor forState:UIControlStateNormal];
     [button setAlpha:0.65];
     
@@ -128,7 +133,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibReset = [self createCustomButton:self.uibReset
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
-                                   withTitle:RESET
+                              withTitleImage:[UIImage imageNamed:@"reset"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
@@ -174,22 +179,22 @@ shouldChangeCharactersInRange:(NSRange)range
 
 
 // " ( "
--(void)createOpenParanthesesButton
+-(void)createOpenParenthesesButton
 {
-    self.uibOpenParantheses = [self createCustomButton:self.uibOpenParantheses
+    self.uibOpenParentheses = [self createCustomButton:self.uibOpenParentheses
                                    parentView:self.view
                               backgroundColor:[UIColor whiteColor]
-                                    withTitle:OPEN_PARANTHESES
+                               withTitleImage:[UIImage imageNamed:@"open-parentheses"]
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
                                   borderWidth:1.0f];
     
-    [self.uibOpenParantheses addTarget:self
+    [self.uibOpenParentheses addTarget:self
                      action:@selector(addToInput:)
            forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibOpenParantheses
+                                             constraintWithItem:self.uibOpenParentheses
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uibReset
@@ -197,7 +202,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              multiplier:1.0 constant:4];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibOpenParantheses
+                                           constraintWithItem:self.uibOpenParentheses
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea
@@ -205,7 +210,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            multiplier:1.0 constant:10];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibOpenParantheses
+                                             constraintWithItem:self.uibOpenParentheses
                                              attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea
@@ -213,7 +218,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              multiplier:0.25 constant:-3];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibOpenParantheses
+                                              constraintWithItem:self.uibOpenParentheses
                                               attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view
@@ -225,30 +230,30 @@ shouldChangeCharactersInRange:(NSRange)range
 
 
 // " ) "
--(void)createClosedParanthesesButton
+-(void)createCloseParenthesesButton
 {
-    self.uibClosedParantheses = [self createCustomButton:self.uibClosedParantheses
+    self.uibCloseParentheses = [self createCustomButton:self.uibCloseParentheses
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
-                                   withTitle:CLOSED_PARANTHESES
+                              withTitleImage:[UIImage imageNamed:@"close-parentheses"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
     
-    [self.uibClosedParantheses addTarget:self
+    [self.uibCloseParentheses addTarget:self
                      action:@selector(addToInput:)
            forControlEvents:UIControlEventTouchUpInside];
     
     NSLayoutConstraint *tfRightConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibClosedParantheses
+                                             constraintWithItem:self.uibCloseParentheses
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibOpenParantheses
+                                             toItem:self.uibOpenParentheses
                                              attribute:NSLayoutAttributeRight
                                              multiplier:1.0 constant:4];
     
     NSLayoutConstraint *tfTopConstraint = [NSLayoutConstraint
-                                           constraintWithItem:self.uibClosedParantheses
+                                           constraintWithItem:self.uibCloseParentheses
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
                                            toItem:self.uilNumbersArea
@@ -256,14 +261,14 @@ shouldChangeCharactersInRange:(NSRange)range
                                            multiplier:1.0 constant:10];
     
     NSLayoutConstraint *tfWidthConstraint = [NSLayoutConstraint
-                                             constraintWithItem:self.uibClosedParantheses
+                                             constraintWithItem:self.uibCloseParentheses
                                              attribute:NSLayoutAttributeWidth
                                              relatedBy:NSLayoutRelationEqual
                                              toItem:self.uilNumbersArea attribute:NSLayoutAttributeWidth
                                              multiplier:0.25 constant:-3];
     
     NSLayoutConstraint *tfHeightConstraint = [NSLayoutConstraint
-                                              constraintWithItem:self.uibClosedParantheses
+                                              constraintWithItem:self.uibCloseParentheses
                                               attribute:NSLayoutAttributeHeight
                                               relatedBy:NSLayoutRelationEqual
                                               toItem:self.view attribute:NSLayoutAttributeHeight
@@ -278,7 +283,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDelete = [self createCustomButton:self.uibDelete
                                    parentView:self.view
                               backgroundColor:_lightBlueColour
-                                    withTitle:DELETE
+                               withTitleImage:[UIImage imageNamed:@"delete"]
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
                                   borderWidth:1.0f];
@@ -291,7 +296,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                              constraintWithItem:self.uibDelete
                                              attribute:NSLayoutAttributeLeft
                                              relatedBy:NSLayoutRelationEqual
-                                             toItem:self.uibClosedParantheses
+                                             toItem:self.uibCloseParentheses
                                              attribute:NSLayoutAttributeRight
                                              multiplier:1.0 constant:4];
     
@@ -328,7 +333,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibPowerY = [self createCustomButton:self.uibPowerY
                                     parentView:self.view
                                backgroundColor:[UIColor whiteColor]
-                                     withTitle:POWER
+                                withTitleImage:[UIImage imageNamed:@"power"]
                                     titleColor:[UIColor blackColor]
                                    borderColor:[UIColor grayColor]
                                    borderWidth:1.0f];
@@ -379,7 +384,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibRootY = [self createCustomButton:self.uibRootY
                                 parentView:self.view
                            backgroundColor:[UIColor whiteColor]
-                                 withTitle:ROOT
+                            withTitleImage:[UIImage imageNamed:@"nthRoot"]
                                 titleColor:[UIColor blackColor]
                                borderColor:[UIColor grayColor]
                                borderWidth:1.0f];
@@ -401,7 +406,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uibRootY
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uibOpenParantheses
+                                           toItem:self.uibOpenParentheses
                                            attribute: NSLayoutAttributeBottom
                                            multiplier:1.0 constant:4];
     
@@ -428,12 +433,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createDotButton
 {
     self.uibDot = [self createCustomButton:self.uibDot
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:DOT
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"dot"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
    
     [self.uibDot addTarget:self
                      action:@selector(addToInput:)
@@ -451,7 +456,7 @@ shouldChangeCharactersInRange:(NSRange)range
                                            constraintWithItem:self.uibDot
                                            attribute:NSLayoutAttributeTop
                                            relatedBy:NSLayoutRelationEqual
-                                           toItem:self.uibClosedParantheses
+                                           toItem:self.uibCloseParentheses
                                            attribute: NSLayoutAttributeBottom
                                            multiplier:1.0 constant:4];
     
@@ -479,7 +484,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDiv = [self createCustomButton:self.uibDiv
                   parentView:self.view
              backgroundColor:_lightBlueColour
-                   withTitle:DIVISION
+              withTitleImage:[UIImage imageNamed:@"division"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -527,12 +532,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton7
 {
     self.uib7 = [self createCustomButton:self.uib7
-                  parentView:self.view
-                 backgroundColor:[UIColor whiteColor]
-                   withTitle:SEVEN
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"seven"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib7 addTarget:self
                      action:@selector(addToInput:)
@@ -573,7 +578,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib8 = [self createCustomButton:self.uib8
                   parentView:self.view
              backgroundColor:[UIColor whiteColor]
-                   withTitle:EIGHT
+              withTitleImage:[UIImage imageNamed:@"eight"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -619,7 +624,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib9 = [self createCustomButton:self.uib9
                   parentView:self.view
              backgroundColor:[UIColor whiteColor]
-                   withTitle:NINE
+              withTitleImage:[UIImage imageNamed:@"nine"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
                  borderWidth:1.0f];
@@ -664,12 +669,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createMultiplyButton
 {
     self.uibMultiply = [self createCustomButton:self.uibMultiply
-                  parentView:self.view
-             backgroundColor:_lightBlueColour
-                   withTitle:MULTIPLICATION
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                                     parentView:self.view
+                                backgroundColor:_lightBlueColour
+                                 withTitleImage:[UIImage imageNamed:@"multiply"]
+                                     titleColor:[UIColor blackColor]
+                                    borderColor:[UIColor grayColor]
+                                    borderWidth:1.0f];
     
     [self.uibMultiply addTarget:self
                      action:@selector(addToInput:)
@@ -710,12 +715,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton4
 {
     self.uib4 = [self createCustomButton:self.uib4
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:FOUR
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"four"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib4 addTarget:self
                      action:@selector(addToInput:)
@@ -756,12 +761,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton5
 {
     self.uib5 = [self createCustomButton:self.uib5
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:FIVE
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"five"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib5 addTarget:self
                      action:@selector(addToInput:)
@@ -802,12 +807,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton6
 {
     self.uib6 = [self createCustomButton:self.uib6
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:SIX
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"six"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib6 addTarget:self
                      action:@selector(addToInput:)
@@ -849,12 +854,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createMinusButton
 {
     self.uibMinus = [self createCustomButton:self.uibMinus
-                  parentView:self.view
-             backgroundColor:_lightBlueColour
-                   withTitle:SUBTRACTION
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                                  parentView:self.view
+                             backgroundColor:_lightBlueColour
+                              withTitleImage:[UIImage imageNamed:@"minus"]
+                                  titleColor:[UIColor blackColor]
+                                 borderColor:[UIColor grayColor]
+                                 borderWidth:1.0f];
     
     [self.uibMinus addTarget:self
                      action:@selector(addToInput:)
@@ -895,12 +900,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton1
 {
     self.uib1 = [self createCustomButton:self.uib1
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:ONE
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"one"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib1 addTarget:self
                      action:@selector(addToInput:)
@@ -941,12 +946,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton2
 {
     self.uib2 = [self createCustomButton:self.uib2
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:TWO
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"two"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib2 addTarget:self
                      action:@selector(addToInput:)
@@ -987,12 +992,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createButton3
 {
     self.uib3 = [self createCustomButton:self.uib3
-                  parentView:self.view
-             backgroundColor:[UIColor whiteColor]
-                   withTitle:THREE
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                              parentView:self.view
+                         backgroundColor:[UIColor whiteColor]
+                          withTitleImage:[UIImage imageNamed:@"three"]
+                              titleColor:[UIColor blackColor]
+                             borderColor:[UIColor grayColor]
+                             borderWidth:1.0f];
     
     [self.uib3 addTarget:self
                      action:@selector(addToInput:)
@@ -1034,12 +1039,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createPlusButton
 {
     self.uibPlus = [self createCustomButton:self.uibPlus
-                  parentView:self.view
-             backgroundColor:_lightBlueColour
-                   withTitle:ADDITION
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                                 parentView:self.view
+                            backgroundColor:_lightBlueColour
+                             withTitleImage:[UIImage imageNamed:@"plus"]
+                                 titleColor:[UIColor blackColor]
+                                borderColor:[UIColor grayColor]
+                                borderWidth:1.0f];
     
     [self.uibPlus addTarget:self
                      action:@selector(addToInput:)
@@ -1082,7 +1087,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibZero = [self createCustomButton:self.uibZero
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
-                                   withTitle:ZERO
+                              withTitleImage:[UIImage imageNamed:@"zero"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
                                  borderWidth:1.0f];
@@ -1127,12 +1132,12 @@ shouldChangeCharactersInRange:(NSRange)range
 -(void)createEqualsButton
 {
     self.uibEquals = [self createCustomButton:self.uibEquals
-                  parentView:self.view
-             backgroundColor:_lightBlueColour
-                   withTitle:EQUALITY
-                  titleColor:[UIColor blackColor]
-                 borderColor:[UIColor grayColor]
-                 borderWidth:1.0f];
+                                   parentView:self.view
+                              backgroundColor:_lightBlueColour
+                               withTitleImage:[UIImage imageNamed:@"equals"]
+                                   titleColor:[UIColor blackColor]
+                                  borderColor:[UIColor grayColor]
+                                  borderWidth:1.0f];
     
     [self.uibEquals addTarget:self
                        action:@selector(calculateResult:)
@@ -1183,15 +1188,15 @@ shouldChangeCharactersInRange:(NSRange)range
     
     // create and align calculating buttons
     [self createResetButton];
-    [self createOpenParanthesesButton];
-    [self createClosedParanthesesButton];
+    [self createOpenParenthesesButton];
+    [self createCloseParenthesesButton];
     [self createDelButton];
     
     [self createPowerYButton];
     [self createRootYButton];
     [self createDotButton];
     [self createDivisionButton];
-    
+
     [self createButton7];
     [self createButton8];
     [self createButton9];
@@ -1201,12 +1206,12 @@ shouldChangeCharactersInRange:(NSRange)range
     [self createButton5];
     [self createButton6];
     [self createMinusButton];
-    
+
     [self createButton1];
     [self createButton2];
     [self createButton3];
     [self createPlusButton];
-    
+
     [self createButton0];
     [self createEqualsButton];
 }
