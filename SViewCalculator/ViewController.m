@@ -20,6 +20,7 @@ UIColor* _lightBlueColour;
 -(UIButton*)createCustomButton :(UIButton*) button
                  parentView:(UIView*) superview
             backgroundColor:(UIColor*) backgroundColor
+                      withTitle:(NSString*)title
                   withTitleImage:(UIImage*) titleImage
                  titleColor:(UIColor*) titleColor
                 borderColor:(UIColor*) borderColor
@@ -40,7 +41,8 @@ UIColor* _lightBlueColour;
     button.tintColor = titleColor;
     button.imageEdgeInsets = UIEdgeInsetsMake(20,20,20,20);
 
-    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateHighlighted];
+    [button setTitleColor:[UIColor colorWithWhite:0 alpha:0] forState:UIControlStateNormal];
     [button setAlpha:0.65];
     
     [superview addSubview:button];
@@ -70,7 +72,7 @@ UIColor* _lightBlueColour;
     self.uilNumbersArea.inputView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.uilNumbersArea setAlpha:0.65];
     
-    [self.uilNumbersArea setDelegate:self];
+    [self.uilNumbersArea setDelegate:((id<UITextViewDelegate>)self)];
     [self.view addSubview:self.uilNumbersArea];
     
     
@@ -133,6 +135,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibReset = [self createCustomButton:self.uibReset
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
+                                   withTitle:RESET
                               withTitleImage:[UIImage imageNamed:@"reset"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
@@ -184,6 +187,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibOpenParentheses = [self createCustomButton:self.uibOpenParentheses
                                    parentView:self.view
                               backgroundColor:[UIColor whiteColor]
+                                    withTitle:OPEN_PARANTHESES
                                withTitleImage:[UIImage imageNamed:@"open-parentheses"]
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
@@ -235,6 +239,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibCloseParentheses = [self createCustomButton:self.uibCloseParentheses
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
+                                   withTitle:CLOSED_PARANTHESES
                               withTitleImage:[UIImage imageNamed:@"close-parentheses"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
@@ -283,6 +288,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDelete = [self createCustomButton:self.uibDelete
                                    parentView:self.view
                               backgroundColor:_lightBlueColour
+                                    withTitle:DELETE
                                withTitleImage:[UIImage imageNamed:@"delete"]
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
@@ -333,6 +339,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibPowerY = [self createCustomButton:self.uibPowerY
                                     parentView:self.view
                                backgroundColor:[UIColor whiteColor]
+                                    withTitle:POWER
                                 withTitleImage:[UIImage imageNamed:@"power"]
                                     titleColor:[UIColor blackColor]
                                    borderColor:[UIColor grayColor]
@@ -384,6 +391,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibRootY = [self createCustomButton:self.uibRootY
                                 parentView:self.view
                            backgroundColor:[UIColor whiteColor]
+                                   withTitle:ROOT
                             withTitleImage:[UIImage imageNamed:@"nthRoot"]
                                 titleColor:[UIColor blackColor]
                                borderColor:[UIColor grayColor]
@@ -435,6 +443,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDot = [self createCustomButton:self.uibDot
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                                 withTitle:DOT
                           withTitleImage:[UIImage imageNamed:@"dot"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -484,6 +493,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibDiv = [self createCustomButton:self.uibDiv
                   parentView:self.view
              backgroundColor:_lightBlueColour
+                   withTitle:DIVISION
               withTitleImage:[UIImage imageNamed:@"division"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -534,6 +544,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib7 = [self createCustomButton:self.uib7
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:SEVEN
                           withTitleImage:[UIImage imageNamed:@"seven"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -578,6 +589,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib8 = [self createCustomButton:self.uib8
                   parentView:self.view
              backgroundColor:[UIColor whiteColor]
+                   withTitle:EIGHT
               withTitleImage:[UIImage imageNamed:@"eight"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -624,6 +636,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib9 = [self createCustomButton:self.uib9
                   parentView:self.view
              backgroundColor:[UIColor whiteColor]
+                   withTitle:NINE
               withTitleImage:[UIImage imageNamed:@"nine"]
                   titleColor:[UIColor blackColor]
                  borderColor:[UIColor grayColor]
@@ -671,6 +684,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibMultiply = [self createCustomButton:self.uibMultiply
                                      parentView:self.view
                                 backgroundColor:_lightBlueColour
+                                      withTitle:MULTIPLICATION
                                  withTitleImage:[UIImage imageNamed:@"multiply"]
                                      titleColor:[UIColor blackColor]
                                     borderColor:[UIColor grayColor]
@@ -717,6 +731,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib4 = [self createCustomButton:self.uib4
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:FOUR
                           withTitleImage:[UIImage imageNamed:@"four"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -763,6 +778,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib5 = [self createCustomButton:self.uib5
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:FIVE
                           withTitleImage:[UIImage imageNamed:@"five"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -809,6 +825,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib6 = [self createCustomButton:self.uib6
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:SIX
                           withTitleImage:[UIImage imageNamed:@"six"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -856,6 +873,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibMinus = [self createCustomButton:self.uibMinus
                                   parentView:self.view
                              backgroundColor:_lightBlueColour
+                                   withTitle:SUBTRACTION
                               withTitleImage:[UIImage imageNamed:@"minus"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
@@ -902,6 +920,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib1 = [self createCustomButton:self.uib1
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:ONE
                           withTitleImage:[UIImage imageNamed:@"one"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -948,6 +967,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib2 = [self createCustomButton:self.uib2
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:TWO
                           withTitleImage:[UIImage imageNamed:@"two"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -994,6 +1014,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uib3 = [self createCustomButton:self.uib3
                               parentView:self.view
                          backgroundColor:[UIColor whiteColor]
+                               withTitle:THREE
                           withTitleImage:[UIImage imageNamed:@"three"]
                               titleColor:[UIColor blackColor]
                              borderColor:[UIColor grayColor]
@@ -1041,6 +1062,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibPlus = [self createCustomButton:self.uibPlus
                                  parentView:self.view
                             backgroundColor:_lightBlueColour
+                                  withTitle:ADDITION
                              withTitleImage:[UIImage imageNamed:@"plus"]
                                  titleColor:[UIColor blackColor]
                                 borderColor:[UIColor grayColor]
@@ -1087,6 +1109,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibZero = [self createCustomButton:self.uibZero
                                   parentView:self.view
                              backgroundColor:[UIColor whiteColor]
+                                  withTitle:ZERO
                               withTitleImage:[UIImage imageNamed:@"zero"]
                                   titleColor:[UIColor blackColor]
                                  borderColor:[UIColor grayColor]
@@ -1134,6 +1157,7 @@ shouldChangeCharactersInRange:(NSRange)range
     self.uibEquals = [self createCustomButton:self.uibEquals
                                    parentView:self.view
                               backgroundColor:_lightBlueColour
+                                    withTitle:EQUALITY
                                withTitleImage:[UIImage imageNamed:@"equals"]
                                    titleColor:[UIColor blackColor]
                                   borderColor:[UIColor grayColor]
